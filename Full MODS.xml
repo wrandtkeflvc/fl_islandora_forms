@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!--test-->
 <definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3">
   <properties>
     <root_name>mods</root_name>
@@ -203,14 +202,8 @@
                 <properties>
                   <type>tags</type>
                   <access>TRUE</access>
-                  <collapsed>FALSE</collapsed>
-                  <collapsible>FALSE</collapsible>
-                  <description>The name of a logo to display with the object in addition to the logo of the owning institution.</description>
-                  <disabled>FALSE</disabled>
-                  <executes_submit_callback>FALSE</executes_submit_callback>
-                  <multiple>FALSE</multiple>
+                  <description>The name of a logo to display with the object, in addition to the logo of the owning institution.</description>
                   <required>FALSE</required>
-                  <resizable>FALSE</resizable>
                   <title>Other logo</title>
                   <tree>TRUE</tree>
                 </properties>
@@ -219,13 +212,7 @@
                     <properties>
                       <type>tag</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <tree>TRUE</tree>
                       <actions>
                         <create>
@@ -5646,11 +5633,7 @@
           <access>TRUE</access>
           <collapsed>TRUE</collapsed>
           <collapsible>TRUE</collapsible>
-          <disabled>FALSE</disabled>
-          <executes_submit_callback>FALSE</executes_submit_callback>
-          <multiple>FALSE</multiple>
           <required>FALSE</required>
-          <resizable>FALSE</resizable>
           <title>Subjects - Names, Title, Geographic &amp; Occupation</title>
           <tree>TRUE</tree>
         </properties>
@@ -5790,15 +5773,9 @@
                         <properties>
                           <type>tags</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>A full personal name (when not divided into Family and Given name), full corporate/meeting name,or 
  corporate/meeting name segment.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Name Part</title>
                           <tree>TRUE</tree>
                         </properties>
@@ -5908,14 +5885,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>Title and/or enumeration associated with a name, such as Jr., II, etc.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Terms of Address</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -5945,14 +5916,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>Date(s) associated with a personal name.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Dates</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -5982,14 +5947,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>An organization associated this person at the time that the resource was created.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Affiliation</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -6322,13 +6281,7 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Title</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -6357,14 +6310,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>A word, phrase, character, or group of characters that contains the remainder of the title information after the title proper.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Subtitle</title>
                           <tree>TRUE</tree>
                           <actions>
