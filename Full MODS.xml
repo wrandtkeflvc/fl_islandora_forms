@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!--test-->
 <definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3">
   <properties>
     <root_name>mods</root_name>
