@@ -202,8 +202,14 @@
                 <properties>
                   <type>tags</type>
                   <access>TRUE</access>
-                  <description>The name of a logo to display with the object, in addition to the logo of the owning institution.</description>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>The name of a logo to display with the object in addition to the logo of the owning institution.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <required>FALSE</required>
+                  <resizable>FALSE</resizable>
                   <title>Other logo</title>
                   <tree>TRUE</tree>
                 </properties>
@@ -212,7 +218,13 @@
                     <properties>
                       <type>tag</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <tree>TRUE</tree>
                       <actions>
                         <create>
@@ -430,8 +442,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>A word, phrase, character, or group of characters that contains the remainder of the title information after the title proper.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Subtitle</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -460,8 +478,14 @@
                     <properties>
                       <type>tags</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>The place a single item holds in a collection or series of works, for example, a volume or series number.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Part Number</title>
                       <tree>TRUE</tree>
                     </properties>
@@ -558,8 +582,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>The language of the main title, usually the same language as the text.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Language</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -588,8 +618,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>The controlled vocabulary from which the title was taken.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <return_value>naf</return_value>
                       <title>Authority</title>
                       <tree>TRUE</tree>
@@ -619,8 +655,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>Additional text associated with the element if needed for display purposes.  The preferred text with its capitalization should be included, but not delimiters such as colons.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Display label</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -649,8 +691,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>Use to link the title to the same title in a different language or script.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Alternate Representation Group</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -679,8 +727,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>Use to link the title to the same title in a different language or script.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Name/title group</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -3751,7 +3805,13 @@
             <properties>
               <type>tags</type>
               <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
               <required>FALSE</required>
+              <resizable>FALSE</resizable>
               <title>Form</title>
               <tree>TRUE</tree>
             </properties>
@@ -4186,10 +4246,7 @@
                       <path>self::node()</path>
                       <context>parent</context>
                     </update>
-                    <delete>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </delete>
+                    <delete>NULL</delete>
                   </actions>
                 </properties>
                 <children/>
@@ -4202,8 +4259,14 @@
         <properties>
           <type>textarea</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
           <description>A description of the contents of a resource.</description>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <title>Table of contents</title>
           <tree>TRUE</tree>
           <actions>
@@ -5633,7 +5696,11 @@
           <access>TRUE</access>
           <collapsed>TRUE</collapsed>
           <collapsible>TRUE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <title>Subjects - Names, Title, Geographic &amp; Occupation</title>
           <tree>TRUE</tree>
         </properties>
@@ -5773,9 +5840,15 @@
                         <properties>
                           <type>tags</type>
                           <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
                           <description>A full personal name (when not divided into Family and Given name), full corporate/meeting name,or 
  corporate/meeting name segment.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
+                          <resizable>FALSE</resizable>
                           <title>Name Part</title>
                           <tree>TRUE</tree>
                         </properties>
@@ -5885,8 +5958,14 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
                           <description>Title and/or enumeration associated with a name, such as Jr., II, etc.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
+                          <resizable>FALSE</resizable>
                           <title>Terms of Address</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -5916,8 +5995,14 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
                           <description>Date(s) associated with a personal name.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
+                          <resizable>FALSE</resizable>
                           <title>Dates</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -5947,8 +6032,14 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
                           <description>An organization associated this person at the time that the resource was created.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
+                          <resizable>FALSE</resizable>
                           <title>Affiliation</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -6281,7 +6372,13 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
+                          <resizable>FALSE</resizable>
                           <title>Title</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -6310,8 +6407,14 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
                           <description>A word, phrase, character, or group of characters that contains the remainder of the title information after the title proper.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
+                          <resizable>FALSE</resizable>
                           <title>Subtitle</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -9215,7 +9318,7 @@
                   <value>&lt;accessCondition type="useAndReproduction"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>/mods:mods/mods:accessCondition[(node()) and (not(@type) or @type='useAndReproduction')]</path>
+                  <path>/mods:mods/mods:accessCondition[(node() and @type='useAndReproduction' or @type='use and reproduction')]</path>
                   <context>document</context>
                 </read>
                 <update>
@@ -9270,7 +9373,7 @@
                   <value>&lt;accessCondition type="restrictionOnAccess"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>/mods:mods/mods:accessCondition[(node() and @type='restrictionOnAccess')]</path>
+                  <path>/mods:mods/mods:accessCondition[(node()) and (not(@type) or @type='restrictionOnAccess' or @type='restriction on access')]</path>
                   <context>document</context>
                 </read>
                 <update>
