@@ -40,8 +40,14 @@
         <properties>
           <type>hidden</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
           <default_value>http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd</default_value>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <tree>TRUE</tree>
           <actions>
             <create>
@@ -66,7 +72,13 @@
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <title>Local fields</title>
           <tree>TRUE</tree>
           <actions>
@@ -94,7 +106,13 @@
               <attributes>
                 <index key="xmlns:f">"info/flvc/manifest/v1"</index>
               </attributes>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
               <required>FALSE</required>
+              <resizable>FALSE</resizable>
               <title>Local fields</title>
               <tree>TRUE</tree>
               <actions>
@@ -121,13 +139,13 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The institution code of the library that owns the digital object.</description>
+                  <description>The institution that owns the digital object.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <options>
                     <index key=""/>
-                    <BRO>Broward College</BRO>
+                    <Broward>Broward College</Broward>
                     <FAMU>Florida A&amp;M University</FAMU>
                     <FAU>Florida Atlantic University</FAU>
                     <FGCU>Florida Gulf Coast University</FGCU>
@@ -135,7 +153,8 @@
                     <FLVC>Florida Virtual Campus</FLVC>
                     <FSU>Florida State University</FSU>
                     <GCSC>Gulf Coast State College</GCSC>
-                    <NCF>New College of Florida</NCF>
+                    <HCCFL>Hillsborough Community College</HCCFL>
+					<NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
@@ -173,10 +192,15 @@
                 <properties>
                   <type>select</type>
                   <access>TRUE</access>
-                  <description>The code of the institution submitting the object.</description>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>The institution submitting the object.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <options>
                     <index key=""/>
-                    <BRO>Broward College</BRO>
+                    <Broward>Broward College</Broward>
                     <FAMU>Florida A&amp;M University</FAMU>
                     <FAU>Florida Atlantic University</FAU>
                     <FGCU>Florida Gulf Coast University</FGCU>
@@ -184,7 +208,8 @@
                     <FLVC>Florida Virtual Campus</FLVC>
                     <FSU>Florida State University</FSU>
                     <GCSC>Gulf Coast State College</GCSC>
-                    <NCF>New College of Florida</NCF>
+                    <HCCFL>Hillsborough Community College</HCCFL>
+					<NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
@@ -193,6 +218,7 @@
                     <UWF>University of West Florida</UWF>
                   </options>
                   <required>FALSE</required>
+                  <resizable>FALSE</resizable>
                   <title>Submitting institutition</title>
                   <tree>TRUE</tree>
                   <actions>
@@ -221,8 +247,14 @@
                 <properties>
                   <type>tags</type>
                   <access>TRUE</access>
-                  <description>A logo to display with objects, in addition to the logo of the owning institution.</description>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A logo to display with objects in addition to the logo of the owning institution.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <required>FALSE</required>
+                  <resizable>FALSE</resizable>
                   <title>Other logo</title>
                   <tree>TRUE</tree>
                 </properties>
@@ -294,9 +326,15 @@
             <properties>
               <type>textfield</type>
               <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
               <description>The name by which the resource is formally known.</description>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
               <maxlength>400</maxlength>
+              <multiple>FALSE</multiple>
               <required>FALSE</required>
+              <resizable>FALSE</resizable>
               <title>Title</title>
               <tree>TRUE</tree>
               <actions>
@@ -1166,9 +1204,15 @@
         <properties>
           <type>tags</type>
           <access>TRUE</access>
-          <description>Information about aspects of the resource besides its intellectual content.</description>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <description>Information about aspects of the resource besides its intellectual content.  Specific kinds of notes with note type or display labels (e.g. "Bibliography" or "Thesis" notes) will not display on this form; use the Full MODS form instead.</description>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
-          <title>Note</title>
+          <resizable>FALSE</resizable>
+          <title>General note</title>
           <tree>TRUE</tree>
         </properties>
         <children>
@@ -1777,7 +1821,7 @@
           <access>TRUE</access>
           <collapsed>FALSE</collapsed>
           <collapsible>FALSE</collapsible>
-          <description>General information about the use and reproduction of the resource, including links to copyright information pages.  For specific restrictions on access (e.g. "Restricted: cannot be viewed until 2010") use the Restriction on Access note in the Full MODS form.</description>
+          <description>General information about the use and reproduction of the resource, including links to copyright information pages.  For specific restrictions on access (e.g. "Restricted: cannot be viewed until 2010") use the Restriction on Access note.</description>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
@@ -1809,7 +1853,7 @@
                   <value>&lt;accessCondition type="useAndReproduction"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>/mods:mods/mods:accessCondition[(node()) and (not(@type) or @type='useAndReproduction')]</path>
+                  <path>/mods:mods/mods:accessCondition[(node() and @type='useAndReproduction'  or @type='use and reproduction')]</path>
                   <context>document</context>
                 </read>
                 <update>
@@ -1820,6 +1864,58 @@
                   <path>self::node()</path>
                   <context>self</context>
                 </delete>
+              </actions>
+            </properties>
+            <children/>
+          </element>
+        </children>
+      </element>
+      <element name="accessRestriction">
+        <properties>
+          <type>tags</type>
+          <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <description>Specific restriction on access (e.g. "Restricted: cannot be viewed until 2010").  For general information about the use and reproduction of the resource, including links to copyright information pages, use the "Use and reproduction" note.</description>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Restriction on access</title>
+          <tree>TRUE</tree>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>tag</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>/mods:mods</path>
+                  <context>document</context>
+                  <schema/>
+                  <type>xml</type>
+                  <prefix>NULL</prefix>
+                  <value>&lt;accessCondition type="restrictionOnAccess"&gt;%value%&lt;/accessCondition&gt;</value>
+                </create>
+                <read>
+                  <path>/mods:mods/mods:accessCondition[(node()) and (not(@type) or @type='restrictionOnAccess'  or @type='restriction on access')]</path>
+                  <context>document</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>NULL</delete>
               </actions>
             </properties>
             <children/>
