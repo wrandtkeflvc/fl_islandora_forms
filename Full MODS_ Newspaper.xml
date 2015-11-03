@@ -2,7 +2,7 @@
 <definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3">
   <properties>
     <root_name>mods</root_name>
-    <schema_uri>http://www.loc.gov/standards/mods/v3/mods-3-4.xsd</schema_uri>
+    <schema_uri/>
     <namespaces default="http://www.loc.gov/mods/v3">
       <namespace prefix="flvc">info:flvc/manifest/v1</namespace>
       <namespace prefix="mods">http://www.loc.gov/mods/v3</namespace>
@@ -278,8 +278,8 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
@@ -429,8 +429,14 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
                       <maxlength>400</maxlength>
-                      <required>TRUE</required>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Title</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -913,8 +919,8 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
@@ -1453,7 +1459,7 @@
             <index key="software, multimedia">software, multimedia</index>
             <index key="sound recording">sound recording</index>
             <index key="sound recording-musical">sound recording-musical</index>
-            <index key="sound recording-nonmusical">sound recording-nonmusical</index>
+            <index key="sound recording-nomusical">sound recording-nonmusical</index>
             <index key="still image">still image</index>
             <text>text</text>
             <index key="three dimensional object">three dimensional object</index>
@@ -1783,8 +1789,8 @@
                     <properties>
                       <type>fieldset</type>
                       <access>TRUE</access>
-                      <collapsed>TRUE</collapsed>
-                      <collapsible>TRUE</collapsible>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>The date the object was issued.  Prefer for formally published materials.  For reformatted material, use the date of the source, not the digital version.  Enter date in the format YYYY-MM-DD. </description>
                       <disabled>FALSE</disabled>
                       <executes_submit_callback>FALSE</executes_submit_callback>
@@ -1848,7 +1854,7 @@
                           <disabled>FALSE</disabled>
                           <executes_submit_callback>FALSE</executes_submit_callback>
                           <multiple>FALSE</multiple>
-                          <required>FALSE</required>
+                          <required>TRUE</required>
                           <resizable>FALSE</resizable>
                           <title>Date Issued</title>
                           <tree>TRUE</tree>
@@ -1856,7 +1862,7 @@
                             <create>
                               <path>self::node()</path>
                               <context>parent</context>
-                              <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='originInfo']</schema>
+                              <schema/>
                               <type>element</type>
                               <prefix>NULL</prefix>
                               <value>dateIssued</value>
@@ -3858,8 +3864,8 @@
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
@@ -4631,14 +4637,14 @@
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
+          <collapsed>TRUE</collapsed>
           <collapsible>TRUE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Subjects - Topical, Geographic, Temporal, &amp; Genre</title>
+          <title>Subjects - Topical, Geographic, Temporal &amp; Genre</title>
           <tree>TRUE</tree>
         </properties>
         <children>
@@ -5582,13 +5588,7 @@
                     <properties>
                       <type>tags</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>Genre</title>
                       <tree>TRUE</tree>
                     </properties>
@@ -5597,13 +5597,7 @@
                         <properties>
                           <type>tag</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Genre</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -6777,13 +6771,7 @@
                     <properties>
                       <type>fieldset</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>Hierarchical subject</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -7268,14 +7256,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>The ratio between the actual size and a representation of it.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Scale</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -7304,14 +7286,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>The method of representing the surface of a sphere or other shape on a plane.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Projection</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -7340,14 +7316,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>Coordinates covered by the resource</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Coordinates</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -7382,14 +7352,8 @@
             <properties>
               <type>tags</type>
               <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
               <description>The occupation reflected in the contents.</description>
-              <disabled>FALSE</disabled>
-              <executes_submit_callback>FALSE</executes_submit_callback>
-              <multiple>FALSE</multiple>
               <required>FALSE</required>
-              <resizable>FALSE</resizable>
               <title>Occupation</title>
               <tree>TRUE</tree>
             </properties>
@@ -7556,7 +7520,7 @@
           <type>tabs</type>
           <access>TRUE</access>
           <collapsed>FALSE</collapsed>
-          <collapsible>TRUE</collapsible>
+          <collapsible>FALSE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
@@ -7951,14 +7915,8 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
                       <description>The language of the main title, usually the same language as the text.</description>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>Language</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -8200,14 +8158,8 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
                       <description>Anchor text to display instead of the URL or PURL.</description>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>URL display label</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -8236,14 +8188,8 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
                       <description>A public note that will display after the URL or PURL.</description>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>URL note</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -8460,14 +8406,8 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
                       <description>Title and/or enumeration associated with a name, such as Jr., II, etc.</description>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>Terms of Address</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -8497,14 +8437,8 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
                       <description>Date(s) associated with a personal name.</description>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>Dates</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -8534,14 +8468,8 @@
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
                       <description>An organization associated this person at the time that the resource was created.</description>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
-                      <resizable>FALSE</resizable>
                       <title>Affiliation</title>
                       <tree>TRUE</tree>
                       <actions>
@@ -9021,14 +8949,8 @@
                         <properties>
                           <type>textfield</type>
                           <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
                           <description>The date(s) when the content of the resource is valid.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
                           <required>FALSE</required>
-                          <resizable>FALSE</resizable>
                           <title>Date valid</title>
                           <tree>TRUE</tree>
                           <actions>
@@ -9917,8 +9839,8 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
@@ -9989,7 +9911,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
+                      <schema/>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>physicalLocation</value>
@@ -10026,6 +9948,25 @@
                   <resizable>FALSE</resizable>
                   <title>Type of URL</title>
                   <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>displayLabel</value>
+                    </create>
+                    <read>
+                      <path>@displayLabel</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
                 </properties>
                 <children/>
               </element>
@@ -10047,7 +9988,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
+                      <schema/>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>url</value>
@@ -10153,7 +10094,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
+                      <schema/>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>holdingSimple</value>
@@ -10264,8 +10205,8 @@
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <description>Information about the metadata record.</description>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
@@ -10605,7 +10546,7 @@
                               <value>languageTerm</value>
                             </create>
                             <read>
-                              <path>mods:languageTerm</path>
+                              <path>mods:languageTem</path>
                               <context>parent</context>
                             </read>
                             <update>

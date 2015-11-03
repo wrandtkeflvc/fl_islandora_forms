@@ -151,11 +151,15 @@
                     <FGCU>Florida Gulf Coast University</FGCU>
                     <FIU>Florida International University</FIU>
                     <FLVC>Florida Virtual Campus</FLVC>
+                    <FSCJ>Florida State College at Jacksonville</FSCJ>
                     <FSU>Florida State University</FSU>
                     <GCSC>Gulf Coast State College</GCSC>
                     <HCCFL>Hillsborough Community College</HCCFL>
-					<NCF>New College of Florida</NCF>
+                    <IRSC>Indian River State College</IRSC>
+                    <LSSC>Lake-Sumter State College</LSSC>
+                    <NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
+                    <SCF>State College of Florida</SCF>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
                     <UNF>University of North Florida</UNF>
@@ -206,11 +210,15 @@
                     <FGCU>Florida Gulf Coast University</FGCU>
                     <FIU>Florida International University</FIU>
                     <FLVC>Florida Virtual Campus</FLVC>
+                    <FSCJ>Florida State College at Jacksonville</FSCJ>
                     <FSU>Florida State University</FSU>
                     <GCSC>Gulf Coast State College</GCSC>
                     <HCCFL>Hillsborough Community College</HCCFL>
-					<NCF>New College of Florida</NCF>
+                    <IRSC>Indian River State College</IRSC>
+                    <LSSC>Lake-Sumter State College</LSSC>
+                    <NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
+                    <SCF>State College of Florida</SCF>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
                     <UNF>University of North Florida</UNF>
@@ -446,7 +454,14 @@
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <required>TRUE</required>
+                  <resizable>FALSE</resizable>
                   <title>Identifier</title>
                   <tree>TRUE</tree>
                   <actions>
@@ -700,10 +715,15 @@
         <properties>
           <type>select</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
           <default_value>still image</default_value>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <options>
             <index key="mixed material">mixed material</index>
-            <index key="software multimedia">software, multimedia</index>
+            <index key="software, multimedia">software, multimedia</index>
             <index key="three dimensional object">three dimensional object</index>
             <index key="still image">still image</index>
             <index key="sound recording">sound recording</index>
@@ -714,6 +734,7 @@
             <text>text</text>
           </options>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <title>Type of Resource</title>
           <tree>TRUE</tree>
           <actions>
@@ -815,11 +836,11 @@
               <access>TRUE</access>
               <collapsed>FALSE</collapsed>
               <collapsible>FALSE</collapsible>
-              <default_value>single unit</default_value>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
               <options>
+                <index key=""/>
                 <index key="multipart monograph">multipart</index>
                 <index key="integrating resource">integrating</index>
                 <continuing>continuing</continuing>
