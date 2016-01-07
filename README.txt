@@ -18,4 +18,8 @@ Abridged MODS entry form.
 Dublin Core labeled fields mapped to MODS.
 
 
+---Full Mods_Newspaper---
+Full MODS customized for newspaper entry
+
+
 
