@@ -19,14 +19,12 @@ One of the two forms which is enabled for all content models (other than the Col
 ---Collection Form FL-Islandora---
 Enabled for the Collection Content Model on Florida Islandora sites.  It contains only a few fields (Title, Description, Note, and Language).
 
-
-
----DC-Tagged MODS---
-Dublin Core labeled fields mapped to MODS.  This is not deployed on Florida Islandora sites at this time.
-
 ---Full Mods_Newspaper---
-Full MODS customized for newspaper entry.  This not deployed across Florida Islandora sties at this time.
+Full MODS customized for newspaper entry.  This was deployed across Florida Islandora sites in early November 2015, and is associated only with the Newspaper Issue Content Model.
 
+
+---/drafts/DC-Tagged MODS.xml---
+Dublin Core labeled fields mapped to MODS.  This is not deployed on Florida Islandora sites at this time.
 
 
 Background information on how Florida Islandora is using Islandora Forms: 
