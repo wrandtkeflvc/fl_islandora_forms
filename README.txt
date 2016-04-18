@@ -23,6 +23,10 @@ On each new deployment of a MODS form, the Full MODS Newspaper Issue form should
 ---(4) 4_CollectionLevelMODS_form.xml---
 Enabled for the Collection Content Model on Florida Islandora sites.  It contains only a few fields (Title, Description, Note, and Language).
 
+General note on MODS form associations:
+This repo has screenshots of MODS form associations for each form that must be implemented through the GUI.
+The transform mods_to_dc.xsl is versioned at https://github.com/FLVC/islandora_xml_forms/tree/flvc/builder/transforms/mods_to_dc.xsl
+The transform FLVC_MODS_postprocessing.xsl is versioned at https://github.com/FLVC/islandora_xml_forms/tree/flvc/builder/self_transforms/FLVC_MODS_postprocessing.xsl
 
 ---/drafts/DC-Tagged MODS.xml---
 Dublin Core labeled fields mapped to MODS.  This is not deployed on Florida Islandora sites at this time.
