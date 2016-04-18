@@ -32,6 +32,9 @@ The transform FLVC_MODS_postprocessing.xsl is versioned at https://github.com/FL
 Dublin Core labeled fields mapped to MODS.  This is not deployed on Florida Islandora sites at this time.
 
 
+How Florida Islandora deploys a new form across about 20 sites:  Once a form (or a new version of a form) is finalized on the development server, that form is copied over to the test and production servers via SSH.  Then a forms.pl script is run which updates the form across Islandora sites.
+
+
 Background information on how Florida Islandora is using Islandora Forms: 
 
 Florida Islandora is a large consortial system used by public universities and colleges in Florida.  Each university or college with a site has it's own Drupal front end, and sites share a Fedora Commons install.
