@@ -10,17 +10,17 @@ The files in this repo are exports of forms in use for metadata entry on Florida
 Forms in the top level directory are the working forms.  Commit messages should give the reason for a commit (usually an ISG recommendation or an update to new version of MODS).  Forms in /pastDeployments/ are versions of forms made at the date of release.  This allows a quick glimpse into the history of form deployments on production Islandora sites.
 
 
----(1) 1_MODS_SimpleEntry.xml---
+---(1) MODS Simple Entry.xml---
 One of the two forms which is enabled for all content models (other than the Collection Content Model) on Florida Islandora sites.
 
----(2) 2_Full_MODS.xml---
+---(2) Full MODS.xml---
 One of the two forms which is enabled for all content models (other than the Collection Content Model) on Florida Islandora sites. It does not have all MODS fields, but does have many of them.  The form is designed for the use case of someone needing to edit a MODS datastream when that datastream contains a less-used field.
 
----(3) 3_FullMODS_NewspaperIssue.xml---
+---(3) Full MODS Newspaper Issue.xml---
 Full MODS customized for newspaper entry.  This was deployed across Florida Islandora sites in early November 2015, and is associated only with the Newspaper Issue Content Model.  The purpose of this separate form is to require a date be entered for each newspaper Issue.  A date is required in order for the issues to display correctly within the larger Newspaper object.
 On each new deployment of a MODS form, the Full MODS Newspaper Issue form should be recreated by taking a Full MODS form and making the date a required field.
 
----(4) 4_CollectionLevelMODS_form.xml---
+---(4) Collection Form FL-Islandora.xml---
 Enabled for the Collection Content Model on Florida Islandora sites.  It contains only a few fields (Title, Description, Note, and Language).
 
 General note on MODS form associations:
