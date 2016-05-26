@@ -1,1 +1,0 @@
-These forms are related to enforcing a rule where only one identifier of type "IID" will be allowed for each object.  As of May 2016, all deployed forms open identifiers with a blank type and autofill that with a type = "IID".  That introduces errors.  These forms go towards cleaning that up.
