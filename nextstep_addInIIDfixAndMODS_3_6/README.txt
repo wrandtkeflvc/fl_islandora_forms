@@ -10,7 +10,7 @@ Combine in the fix to flipping blank type identifiers to type="IID"
 The in progress development is to:
 Combine in Lydia's updates to be compatible with MODS 3.6.  (I was not able to find this, so there might not be any changes to the Full MODS form. - wvr)
 
-Testing has not been completed.
+Testing is completed as of Sept. 15, 2016.
 
 
 MODS Simple Entry:
