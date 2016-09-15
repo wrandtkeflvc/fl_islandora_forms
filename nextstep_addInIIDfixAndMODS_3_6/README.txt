@@ -14,7 +14,11 @@ MODS Simple Entry:
 
 The starting point is the MODS Simple Entry form deployed in Nov. 2015 on Islandora sites.
 
-The in progress development is to:
+Completed development is to:
 Combine in the fix to flipping blank type identifiers to type="IID"
 and
 Combine in Lydia's updates to be compatible with MODS 3.6.
+
+All the changes have been made.
+
+As of Sept. 15, 2016, MODS Simple Entry IID 3_6.xml has been tested and is fine to use on Islandora sites.
