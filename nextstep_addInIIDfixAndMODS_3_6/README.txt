@@ -4,10 +4,13 @@ Full MODS:
 
 The starting  point is a Full MODS form developed in Aug/Sept. 2016 to corrected a problem with editing records where there is a dateIssued with both a start point and an end point.
 
-The in progress development is to:
+Completed development is to:
 Combine in the fix to flipping blank type identifiers to type="IID"
-and
-Combine in Lydia's updates to be compatible with MODS 3.6.
+
+The in progress development is to:
+Combine in Lydia's updates to be compatible with MODS 3.6.  (I was not able to find this, so there might not be any changes to the Full MODS form. - wvr)
+
+Testing has not been completed.
 
 
 MODS Simple Entry:
