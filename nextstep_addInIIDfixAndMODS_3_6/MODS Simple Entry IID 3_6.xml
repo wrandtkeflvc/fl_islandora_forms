@@ -374,11 +374,18 @@
         </children>
       </element>
       <element name="id">
+	  
         <properties>
-          <type>tabs</type>
+          <type>fieldset</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
-          <title>Identifiers</title>
+          <resizable>FALSE</resizable>
+          <title>IID Identifier</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -395,7 +402,13 @@
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
               <required>FALSE</required>
+              <resizable>FALSE</resizable>
               <tree>TRUE</tree>
               <actions>
                 <create>
@@ -407,7 +420,7 @@
                   <value>identifier</value>
                 </create>
                 <read>
-                  <path>mods:identifier</path>
+                  <path>mods:identifier[@type='IID'][1]</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
@@ -425,6 +438,133 @@
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <default_value>IID</default_value>
+                  <description>"IID" is the local item identifier.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>TRUE</required>
+                  <resizable>FALSE</resizable>
+                  <title>Type</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type="IID"</value>
+                    </create>
+                    <read>
+                      <path>@type</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="identifier">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A unique standard number or code that distinctively identifies the resource. Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>TRUE</required>
+                  <resizable>FALSE</resizable>
+                  <title>Identifier</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>NULL</create>
+                    <read>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
+          </element>
+        </children>
+      </element>
+      <element name="id_otheridentifiers">
+        <properties>
+          <type>tabs</type>
+          <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Identifiers</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>tabpanel</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>identifier</value>
+                </create>
+                <read>
+                  <path>mods:identifier[not(@type='IID')] | mods:identifier[@type='IID'][not(position()=1)]</path>
+                  <context>parent</context>
+                </read>
+                <update>NULL</update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="type">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>The type of identifier.  Suggested values include, but are not limited to, those specified in Standard Identifier Source Codes.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -460,11 +600,11 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
+                  <description>A standard number or code that distinctively identifies the resource.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
-                  <required>TRUE</required>
+                  <required>FALSE</required>
                   <resizable>FALSE</resizable>
                   <title>Identifier</title>
                   <tree>TRUE</tree>
@@ -727,13 +867,14 @@
           <multiple>FALSE</multiple>
           <options>
             <index key="mixed material">mixed material</index>
+            <index key="moving image">moving image</index>
             <index key="software, multimedia">software, multimedia</index>
             <index key="three dimensional object">three dimensional object</index>
             <index key="still image">still image</index>
             <index key="sound recording">sound recording</index>
-            <index key="sound recording-nonmusical">sound recording-nonmusical</index>
             <index key="sound recording-musical">sound recording-musical</index>
-            <index key=" cartographic">cartographic</index>
+            <index key="sound recording-nonmusical">sound recording-nonmusical</index>
+            <cartographic>cartographic</cartographic>
             <index key="notated music">notated music</index>
             <text>text</text>
           </options>
