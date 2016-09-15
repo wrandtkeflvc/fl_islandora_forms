@@ -782,7 +782,7 @@
           </element>
         </children>
       </element>
-      <element name="id_iid">
+      <element name="id">
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>

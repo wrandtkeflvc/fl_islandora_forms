@@ -905,7 +905,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Identifiers</title>
+          <title>Additional Identifiers</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
