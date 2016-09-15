@@ -150,21 +150,23 @@
                     <FAU>Florida Atlantic University</FAU>
                     <FGCU>Florida Gulf Coast University</FGCU>
                     <FIU>Florida International University</FIU>
-                    <FLVC>Florida Virtual Campus</FLVC>
                     <FSCJ>Florida State College at Jacksonville</FSCJ>
                     <FSU>Florida State University</FSU>
+                    <FLVC>Florida Virtual Campus</FLVC>
                     <GCSC>Gulf Coast State College</GCSC>
                     <HCCFL>Hillsborough Community College</HCCFL>
                     <IRSC>Indian River State College</IRSC>
                     <LSSC>Lake-Sumter State College</LSSC>
                     <NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
+					<SPC>St. Petersburgh College</SPC>
                     <SCF>State College of Florida</SCF>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
                     <UNF>University of North Florida</UNF>
                     <USF>University of South Florida</USF>
                     <UWF>University of West Florida</UWF>
+					<VALENCIA>Valencia College</VALENCIA>
                   </options>
                   <required>TRUE</required>
                   <resizable>FALSE</resizable>
@@ -209,21 +211,23 @@
                     <FAU>Florida Atlantic University</FAU>
                     <FGCU>Florida Gulf Coast University</FGCU>
                     <FIU>Florida International University</FIU>
-                    <FLVC>Florida Virtual Campus</FLVC>
                     <FSCJ>Florida State College at Jacksonville</FSCJ>
                     <FSU>Florida State University</FSU>
-                    <GCSC>Gulf Coast State College</GCSC>
+                    <FLVC>Florida Virtual Campus</FLVC>
+					<GCSC>Gulf Coast State College</GCSC>
                     <HCCFL>Hillsborough Community College</HCCFL>
                     <IRSC>Indian River State College</IRSC>
                     <LSSC>Lake-Sumter State College</LSSC>
                     <NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
+					<SPC>St. Petersburgh College</SPC>
                     <SCF>State College of Florida</SCF>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
                     <UNF>University of North Florida</UNF>
                     <USF>University of South Florida</USF>
                     <UWF>University of West Florida</UWF>
+					<VALENCIA>Valencia College</VALENCIA>
                   </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
