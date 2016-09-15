@@ -108,10 +108,6 @@
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <options>
-                    <LSSC>Lake-Sumter State College</LSSC>
-                    <IRSC>Indian River State College</IRSC>
-                    <FSCJ>Florida State College at Jacksonville</FSCJ>
-                    <SCF>State College of Florida</SCF>
                     <index key=""/>
                     <Broward>Broward College</Broward>
                     <FAMU>Florida A&amp;M University</FAMU>
@@ -119,11 +115,15 @@
                     <FGCU>Florida Gulf Coast University</FGCU>
                     <FIU>Florida International University</FIU>
                     <FLVC>Florida Virtual Campus</FLVC>
+                    <FSCJ>Florida State College at Jacksonville</FSCJ>
                     <FSU>Florida State University</FSU>
                     <GCSC>Gulf Coast State College</GCSC>
                     <HCCFL>Hillsborough Community College</HCCFL>
+                    <IRSC>Indian River State College</IRSC>
+                    <LSSC>Lake-Sumter State College</LSSC>
                     <NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
+                    <SCF>State College of Florida</SCF>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
                     <UNF>University of North Florida</UNF>
