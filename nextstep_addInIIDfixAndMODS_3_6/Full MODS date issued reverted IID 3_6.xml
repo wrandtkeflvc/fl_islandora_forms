@@ -786,7 +786,115 @@
           </element>
         </children>
       </element>
-      <element name="id">
+	        <element name="id">
+			        <properties>
+			          <type>fieldset</type>
+			          <access>TRUE</access>
+			          <collapsed>FALSE</collapsed>
+			          <collapsible>FALSE</collapsible>
+			          <disabled>FALSE</disabled>
+			          <executes_submit_callback>FALSE</executes_submit_callback>
+			          <multiple>FALSE</multiple>
+			          <required>FALSE</required>
+			          <resizable>FALSE</resizable>
+			          <title>IID Identifier</title>
+			          <tree>TRUE</tree>
+			          <actions>
+			            <create>NULL</create>
+			            <read>
+			              <path>/mods:mods</path>
+			              <context>document</context>
+			            </read>
+			            <update>NULL</update>
+			            <delete>NULL</delete>
+			          </actions>
+			        </properties>
+			        <children>
+			          <element name="0">
+			            <properties>
+			              <type>tabpanel</type>
+			              <access>TRUE</access>
+			              <collapsed>FALSE</collapsed>
+			              <collapsible>FALSE</collapsible>
+			              <disabled>FALSE</disabled>
+			              <executes_submit_callback>FALSE</executes_submit_callback>
+			              <multiple>FALSE</multiple>
+			              <required>FALSE</required>
+			              <resizable>FALSE</resizable>
+			              <tree>TRUE</tree>
+			            </properties>
+			            <children>
+			              <element name="type">
+			                <properties>
+			                  <type>textfield</type>
+			                  <access>TRUE</access>
+			                  <collapsed>FALSE</collapsed>
+			                  <collapsible>FALSE</collapsible>
+			                  <default_value>IID</default_value>
+			                  <description>The IID, or primary identifier of the resource.  Florida Islandora requires each object to have one and only one IID.</description>
+			                  <disabled>FALSE</disabled>
+			                  <executes_submit_callback>FALSE</executes_submit_callback>
+			                  <multiple>FALSE</multiple>
+			                  <required>TRUE</required>
+			                  <resizable>FALSE</resizable>
+			                  <title>Type</title>
+			                  <tree>TRUE</tree>
+			                  <actions>
+			                    <create>
+			                      <path>self::node()</path>
+			                      <context>parent</context>
+			                      <schema/>
+			                      <type>attribute</type>
+			                      <prefix>NULL</prefix>
+			                      <value>type</value>
+			                    </create>
+			                    <read>
+			                      <path>@type</path>
+			                      <context>parent</context>
+			                    </read>
+			                    <update>
+			                      <path>self::node()</path>
+			                      <context>self</context>
+			                    </update>
+			                    <delete>NULL</delete>
+			                  </actions>
+			                </properties>
+			                <children/>
+			              </element>
+			              <element name="identifier">
+			                <properties>
+			                  <type>textfield</type>
+			                  <access>TRUE</access>
+			                  <collapsed>FALSE</collapsed>
+			                  <collapsible>FALSE</collapsible>
+			                  <description>A unique standard number or code that distinctively identifies the resource. Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
+			                  <disabled>FALSE</disabled>
+			                  <executes_submit_callback>FALSE</executes_submit_callback>
+			                  <multiple>FALSE</multiple>
+			                  <required>TRUE</required>
+			                  <resizable>FALSE</resizable>
+			                  <title>IID Identifier</title>
+			                  <tree>TRUE</tree>
+			                  <actions>
+			                    <create>NULL</create>
+			                    <read>
+			                      <path>self::node()</path>
+			                      <context>parent</context>
+			                    </read>
+			                    <update>
+			                      <path>self::node()</path>
+			                      <context>parent</context>
+			                    </update>
+			                    <delete>NULL</delete>
+			                  </actions>
+			                </properties>
+			                <children/>
+			              </element>
+			            </children>
+			          </element>
+			        </children>
+			      </element>
+       <element name="id_otheridentifiers">
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
@@ -832,7 +940,7 @@
                   <value>identifier</value>
                 </create>
                 <read>
-                  <path>mods:identifier</path>
+                  <path>mods:identifier[not(@type='IID')] | mods:identifier[@type='IID'][not(position()=1)]</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
@@ -849,8 +957,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <default_value>IID</default_value>
-                  <description>The type of identifier.  Suggested values include, but are not limited to, those specified in Standard Identifier Source Codes.  Use "IID" for local item identifier.</description>
+                  <description>The type of identifier.  Suggested values include, but are not limited to, those specified in Standard Identifier Source Codes.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -886,11 +993,11 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>A unique standard number or code that distinctively identifies the resource. Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
+                  <description>A standard number or code that distinctively identifies the resource.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
-                  <required>TRUE</required>
+                  <required>FALSE</required>
                   <resizable>FALSE</resizable>
                   <title>Identifier</title>
                   <tree>TRUE</tree>
