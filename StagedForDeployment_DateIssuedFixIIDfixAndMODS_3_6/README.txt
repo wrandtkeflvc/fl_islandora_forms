@@ -25,3 +25,9 @@ Combine in Lydia's updates to be compatible with MODS 3.6.
 All the changes have been made.
 
 As of Sept. 15, 2016, MODS Simple Entry IID 3_6.xml has been tested and is fine to use on Islandora sites.
+
+
+Deployment log:
+
+- Sept. 19, 2016:  Wilehlmina installed this on islandora-dev , and on islandora-test.  Gail Lewis will add a code change there to require that the form with element name "id_otheridentifiers" not have any identifiers with type="IID" in it, and give an error message on saving if one is found.
+- Not yet deployed on production sites.
