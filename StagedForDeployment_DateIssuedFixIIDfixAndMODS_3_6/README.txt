@@ -29,11 +29,12 @@ As of Sept. 15, 2016, MODS Simple Entry IID 3_6.xml has been tested and is fine 
 
 Deployment log:
 
-- Sept. 19, 2016:  Wilehlmina installed this on islandora-dev , and on islandora-test.  Gail Lewis will add a code change there to require that the form with element name "id_otheridentifiers" not have any identifiers with type="IID" in it, and give an error message on saving if one is found.
-- Before copying across test sites, the forms.pl script needs to be updated like so:
+- Sept. 19, 2016:  Wilhelmina installed this on islandora-dev , and on islandora-test.  Gail Lewis will add a code change there to require that the form with element name "id_otheridentifiers" not have any identifiers with type="IID" in it, and give an error message on saving if one is found.
+- Sept. 23, 2016: Wilhelmina installed this on production Islandora sites.  "valencia" and "floradora" still need to be added to forms.pl
+- Done:  Before copying across test sites, the forms.pl script needs to be updated like so:
 -- Needs added to line 35: “ucf”, “valencia”, and “fscj”.
 -- Then in the description at lines 71 to 92 of what the script is doing, it should get added that it’s changing all these:  fiu-test , fscj-test , irsc-test , lssc-test , scf-test , spc-test , unf-test , usf-test , uwf-test , and valencia-test .
 - Not yet deployed on production sites.
 - Before copying across production sites, the forms.pl script needs to be updated like so:
--- Needs added to line 35:  "floradora"
+-- Needs added to line 35:  "floradora" and "valencia"
 -- Lines 76 - 80 need to be rewritten to have a list of current production sites.
