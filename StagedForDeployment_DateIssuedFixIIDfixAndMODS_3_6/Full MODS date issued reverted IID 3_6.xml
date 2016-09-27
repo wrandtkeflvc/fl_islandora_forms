@@ -130,7 +130,7 @@
                     <UNF>University of North Florida</UNF>
                     <USF>University of South Florida</USF>
                     <UWF>University of West Florida</UWF>
-					<VALENCIA>Valencia College</VALENCIA>
+                    <VALENCIA>Valencia College</VALENCIA>
                   </options>
                   <required>TRUE</required>
                   <resizable>FALSE</resizable>
@@ -184,14 +184,14 @@
                     <LSSC>Lake-Sumter State College</LSSC>
                     <NCF>New College of Florida</NCF>
                     <NWFSC>Northwest Florida State College</NWFSC>
-					<SPC>St. Petersburg College</SPC>
+                    <SPC>St. Petersburg College</SPC>
                     <SCF>State College of Florida</SCF>
                     <UCF>University of Central Florida</UCF>
                     <UF>University of Florida</UF>
                     <UNF>University of North Florida</UNF>
                     <USF>University of South Florida</USF>
                     <UWF>University of West Florida</UWF>
-					<VALENCIA>Valencia College</VALENCIA>
+                    <VALENCIA>Valencia College</VALENCIA>
                   </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
@@ -786,8 +786,7 @@
           </element>
         </children>
       </element>
-	        <element name="id">
-	  
+      <element name="id">
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
@@ -866,7 +865,7 @@
                       <schema/>
                       <type>attribute</type>
                       <prefix>NULL</prefix>
-                      <value>type="IID"</value>
+                      <value>type</value>
                     </create>
                     <read>
                       <path>@type</path>
