@@ -865,7 +865,7 @@
                       <schema/>
                       <type>attribute</type>
                       <prefix>NULL</prefix>
-                      <value>type="IID"</value>
+                      <value>type</value>
                     </create>
                     <read>
                       <path>@type</path>

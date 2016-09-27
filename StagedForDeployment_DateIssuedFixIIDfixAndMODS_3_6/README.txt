@@ -31,7 +31,8 @@ Deployment log:
 
 - Sept. 19, 2016:  Wilhelmina installed this on islandora-dev , and on islandora-test.  Gail Lewis will add a code change there to require that the form with element name "id_otheridentifiers" not have any identifiers with type="IID" in it, and give an error message on saving if one is found.
 - Sept. 23, 2016: Wilhelmina installed this on production Islandora sites.  "valencia" and "floradora" still need to be added to forms.pl
-- Sept. 26, 2016:  FGCU reported not being able to create objects with the forms.  This is something related to the "Create" step on the identifiers.  Wilhelmina reverted the forms on productions.  Probably, need to roll back the change to identifiers only, but let the other changes go through.
+- Sept. 26, 2016:  FGCU reported not being able to create objects with the forms.  This is something related to the "Create" step on the identifiers.  Wilhelmina reverted the forms on productions.
+- Sept. 27, 2016:  Wilhelmina corrected the create path for identifiers, and deployed the forms.
 - Sept. 27, 2016:  Fixed the problem with the forms.
 - Done:  Before copying across test sites, the forms.pl script needs to be updated like so:
 -- Needs added to line 35: “ucf”, “valencia”, and “fscj”.

@@ -865,7 +865,7 @@
                       <schema/>
                       <type>attribute</type>
                       <prefix>NULL</prefix>
-                      <value>type="IID"</value>
+                      <value>type</value>
                     </create>
                     <read>
                       <path>@type</path>
@@ -1913,8 +1913,8 @@
                     <properties>
                       <type>fieldset</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
+                      <collapsed>TRUE</collapsed>
+                      <collapsible>TRUE</collapsible>
                       <description>The date the object was issued.  Prefer for formally published materials.  For reformatted material, use the date of the source, not the digital version.  Enter date in the format YYYY-MM-DD. </description>
                       <disabled>FALSE</disabled>
                       <executes_submit_callback>FALSE</executes_submit_callback>
@@ -1935,7 +1935,7 @@
                           <disabled>FALSE</disabled>
                           <executes_submit_callback>FALSE</executes_submit_callback>
                           <multiple>FALSE</multiple>
-                          <required>TRUE</required>
+                          <required>FALSE</required>
                           <resizable>FALSE</resizable>
                           <title>Date Issued</title>
                           <tree>TRUE</tree>
