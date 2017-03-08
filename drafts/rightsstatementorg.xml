@@ -580,13 +580,28 @@
             <children>
               <element name="xlink">
                 <properties>
-                  <type>textfield</type>
+                  <type>select</type>
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
+                    <index key="http://rightsstatements.org/vocab/InC-OW-EU/1.0/">In Copyright - EU Orphan Work</index>
+                    <index key="http://rightsstatements.org/vocab/InC-EDU/1.0/">In Copyright - Educational Use Permitted</index>
+                    <index key="http://rightsstatements.org/vocab/InC-NC/1.0/">In Copyright - Non-Commercial Use Permitted</index>
+                    <index key="http://rightsstatements.org/vocab/InC-RUU/1.0/">In Copyright - Rights-holder(s) Unlocatable or Unidentifiable</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-CR/1.0/">No Copyright - Contractual Restrictions</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-NC/1.0/">No Copyright - Non-Commercial Use Only </index>
+                    <index key="http://rightsstatements.org/vocab/NoC-OKLR/1.0/">No Copyright - Other Known Legal Restrictions</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-US/1.0/">No Copyright - United States</index>
+                    <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated</index>
+                    <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined</index>
+                    <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright</index>
+                  </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
                   <title>XLink</title>
@@ -615,7 +630,7 @@
               </element>
               <element name="value">
                 <properties>
-                  <type>textfield</type>
+                  <type>select</type>
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
@@ -623,6 +638,21 @@
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="In Copyright">In Copyright</index>
+                    <index key="In Copyright - EU Orphan Work">In Copyright - EU Orphan Work</index>
+                    <index key="In Copyright - Educational Use Permitted">In Copyright - Educational Use Permitted</index>
+                    <index key="In Copyright - Non-Commercial Use Permitted">In Copyright - Non-Commercial Use Permitted</index>
+                    <index key="In Copyright - Rights-holder(s) Unlocatable or Unidentifiable">In Copyright - Rights-holder(s) Unlocatable or Unidentifiable</index>
+                    <index key="No Copyright - Contractual Restrictions">No Copyright - Contractual Restrictions</index>
+                    <index key="No Copyright - Non-Commercial Use Only">No Copyright - Non-Commercial Use Only</index>
+                    <index key="No Copyright - Other Known Legal Restrictions">No Copyright - Other Known Legal Restrictions</index>
+                    <index key="No Copyright - United States">No Copyright - United States</index>
+                    <index key="Copyright Not Evaluated">Copyright Not Evaluated</index>
+                    <index key="Copyright Undetermined">Copyright Undetermined</index>
+                    <index key="No Known Copyright">No Known Copyright</index>
+                  </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
                   <title>RightsStatements.orgValue</title>
