@@ -578,7 +578,7 @@
               </actions>
             </properties>
             <children>
-              <element name="type">
+              <element name="xlink">
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
@@ -589,7 +589,7 @@
                   <multiple>FALSE</multiple>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
-                  <title>Type</title>
+                  <title>XLink</title>
                   <tree>TRUE</tree>
                   <actions>
                     <create>
@@ -597,11 +597,11 @@
                       <context>parent</context>
                       <schema/>
                       <type>attribute</type>
-                      <prefix>NULL</prefix>
-                      <value>type</value>
+                      <prefix>xlink</prefix>
+                      <value>xlink:href</value>
                     </create>
                     <read>
-                      <path>@type</path>
+                      <path>@xlink:href</path>
                       <context>parent</context>
                     </read>
                     <update>
