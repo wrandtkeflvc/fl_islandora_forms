@@ -324,13 +324,16 @@
             <children>
               <element name="type">
                 <properties>
-                  <type>textfield</type>
+                  <type>select</type>
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
+                  <options>
+                    <IID>IID</IID>
+                  </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
                   <title>Type</title>
@@ -518,7 +521,7 @@
           </element>
         </children>
       </element>
-      <element name="controlledAccessCondition_rightsstatementsorg">
+      <element name="controlledAccessCondition_rightsstatements_org">
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
@@ -567,7 +570,7 @@
                   <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition</path>
+                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='http://rightsstatements.org/vocab/InC/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-OW-EU/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-EDU/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-NC/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-RUU/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-CR/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-NC/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-OKLR/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-US/1.0/' or @xlink:href='http://rightsstatements.org/vocab/CNE/1.0/' or @xlink:href='http://rightsstatements.org/vocab/UND/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NKC/1.0/']</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
@@ -578,6 +581,43 @@
               </actions>
             </properties>
             <children>
+              <element name="type">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="use and reproduction">use and reproduction</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type</value>
+                    </create>
+                    <read>
+                      <path>@type</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
               <element name="xlink">
                 <properties>
                   <type>select</type>
@@ -676,7 +716,7 @@
           </element>
         </children>
       </element>
-      <element name="controlledAccessCondition">
+      <element name="controlledAccessCondition_creativeCommons">
         <properties>
           <type>fieldset</type>
           <access>TRUE</access>
@@ -722,7 +762,7 @@
                   <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition</path>
+                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='https://creativecommons.org/licenses/by/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-sa/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-nd/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-nc/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-nc-sa/4.0/']</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
@@ -733,6 +773,43 @@
               </actions>
             </properties>
             <children>
+              <element name="type">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="use and reproduction">use and reproduction</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type</value>
+                    </create>
+                    <read>
+                      <path>@type</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
               <element name="xlink">
                 <properties>
                   <type>select</type>
