@@ -570,7 +570,7 @@
                   <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition[@type='use and reproduction']</path>
+                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='http://rightsstatements.org/vocab/CNE/1.0/']</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
