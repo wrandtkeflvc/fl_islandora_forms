@@ -578,6 +578,37 @@
               </actions>
             </properties>
             <children>
+              <element name="type">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="use and reproduction">use and reproduction</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type</value>
+                    </create>
+                    <read>NULL</read>
+                    <update>NULL</update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
               <element name="xlink">
                 <properties>
                   <type>select</type>
