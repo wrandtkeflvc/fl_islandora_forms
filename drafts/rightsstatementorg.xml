@@ -570,7 +570,7 @@
                   <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='http://rightsstatements.org/vocab/CNE/1.0/']</path>
+                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='http://rightsstatements.org/vocab/InC/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-OW-EU/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-EDU/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-NC/1.0/' or @xlink:href='http://rightsstatements.org/vocab/InC-RUU/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-CR/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-NC/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-OKLR/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NoC-US/1.0/' or @xlink:href='http://rightsstatements.org/vocab/CNE/1.0/' or @xlink:href='http://rightsstatements.org/vocab/UND/1.0/' or @xlink:href='http://rightsstatements.org/vocab/NKC/1.0/']</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
