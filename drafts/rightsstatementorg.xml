@@ -609,7 +609,10 @@
                       <path>@type</path>
                       <context>parent</context>
                     </read>
-                    <update>NULL</update>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
                     <delete>NULL</delete>
                   </actions>
                 </properties>
