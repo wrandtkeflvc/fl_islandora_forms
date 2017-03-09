@@ -570,7 +570,7 @@
                   <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition</path>
+                  <path>mods:accessCondition[@type='use and reproduction']</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
@@ -605,7 +605,10 @@
                       <prefix>NULL</prefix>
                       <value>type</value>
                     </create>
-                    <read>NULL</read>
+                    <read>
+                      <path>@type</path>
+                      <context>parent</context>
+                    </read>
                     <update>NULL</update>
                     <delete>NULL</delete>
                   </actions>
