@@ -11033,7 +11033,7 @@
         <properties>
           <type>hidden</type>
           <access>TRUE</access>
-          <default_value>http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd</default_value>
+          <default_value>http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd</default_value>
           <required>FALSE</required>
           <tree>TRUE</tree>
           <actions>
