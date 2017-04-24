@@ -1558,7 +1558,7 @@
                     </properties>
                     <children/>
                   </element>
-				  <element name="orcid">
+                  <element name="orcid">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -11033,8 +11033,14 @@
         <properties>
           <type>hidden</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
           <default_value>http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd</default_value>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <tree>TRUE</tree>
           <actions>
             <create>
@@ -11045,11 +11051,11 @@
               <prefix>xsi</prefix>
               <value>xsi:schemaLocation</value>
             </create>
-            <read>
+            <read>NULL</read>
+            <update>
               <path>@xsi:schemaLocation</path>
               <context>parent</context>
-            </read>
-            <update>NULL</update>
+            </update>
             <delete>NULL</delete>
           </actions>
         </properties>
