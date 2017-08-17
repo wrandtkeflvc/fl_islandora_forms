@@ -566,7 +566,7 @@
                   <value>position</value>
                 </create>
                 <read>
-                  <path>/mads:mads/mads:affiliation/mads:position</path>
+                  <path>/mads:mads/mads:affiliation/mads:position[text()!='EmeritusFaculty' or text()!='EmeritusLibrarian' or text()!='EmeritusProfessor' or text()!='FacultyMember' or text()='Librarian' or text()='NonAcademic' or text()='Postdoc' or text()='GraduateStudent' or text()='UndergraduateStudent' or text()='AffiliatedResearcher' or text()='Other']</path>
                   <context>document</context>
                 </read>
                 <update>
@@ -578,7 +578,7 @@
             </properties>
             <children/>
           </element>
-          <element name="position">
+          <element name="controlledposition">
             <properties>
               <type>select</type>
               <access>TRUE</access>
@@ -616,7 +616,7 @@
                   <value>position</value>
                 </create>
                 <read>
-                  <path>/mads:mads/mads:affiliation/mads:position</path>
+                  <path>/mads:mads/mads:affiliation/mads:position[text()='EmeritusFaculty' or text()='EmeritusLibrarian' or text()='EmeritusProfessor' or text()='FacultyMember' or text()='Librarian' or text()='NonAcademic' or text()='Postdoc' or text()='GraduateStudent' or text()='UndergraduateStudent' or text()='AffiliatedResearcher' or text()='Other']</path>
                   <context>document</context>
                 </read>
                 <update>
