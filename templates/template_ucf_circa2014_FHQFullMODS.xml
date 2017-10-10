@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd" version="3.4">
+  <titleInfo>
+    <title>The Florida historical quarterly</title>
+  </titleInfo>
+  <titleInfo type="alternative">
+    <title>Quarterly periodical of the Florida Historical Society</title>
+  </titleInfo>
+  <titleInfo type="alternative">
+    <title>Florida historical quarterly</title>
+  </titleInfo>
+  <name type="personal" usage="primary">
+    <namePart>Florida Historical Society</namePart>
+    <role>
+      <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+    </role>
+  </name>
+  <typeOfResource>text</typeOfResource>
+  <originInfo>
+    <publisher>[St. Augustine]: Florida Historical Society, 1937-</publisher>
+  </originInfo>
+  <language>
+    <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+  </language>
+  <note>Electronic version created 20??, University of Central Florida Libraries, State University System of Florida.</note>
+  <subject>
+    <topic>History.</topic>
+  </subject>
+  <subject>
+    <topic>Florida--History--Periodicals.</topic>
+  </subject>
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>UCF</flvc:owningInstitution>
+    </flvc:flvc>
+  </extension>
+  <genre>book</genre>
+  <physicalDescription>
+    <note>v. in ill., maps. 24 cm.</note>
+  </physicalDescription>
+  <accessCondition type="restrictionOnAccess">All rights to images are held by the respective holding institution. This image is posted publicly for non-profit educational uses, excluding printed publication. Additional information available at http://palmm.fcla.edu/fhq/copy.shtml</accessCondition>
+  <location displayLabel="purl">
+    <url>http://purl.flvc.org/ucf/fd/minalookingatFHQFullMODSform</url>
+  </location>
+</mods:mods>
