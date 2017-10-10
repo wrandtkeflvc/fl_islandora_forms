@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSU</flvc:owningInstitution>
+      <flvc:submittingInstitution>FSU</flvc:submittingInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo type="uniform">
+    <nonSort>The</nonSort>
+    <title>Girl's own annual</title>
+  </titleInfo>
+  <titleInfo type="alternative">
+    <title>Girl's own paper</title>
+  </titleInfo>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">issue</genre>
+  <originInfo>
+    <frequency>Monthly</frequency>
+    <issuance>serial</issuance>
+    <place>
+      <placeTerm type="text">London</placeTerm>
+    </place>
+    <publisher>The "Leisure Hour" Office</publisher>
+  </originInfo>
+  <language>
+    <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+    <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+  </language>
+  <physicalDescription>
+    <digitalOrigin>digitized other analog</digitalOrigin>
+  </physicalDescription>
+  <subject authority="lcsh">
+    <topic>Children's literature</topic>
+  </subject>
+  <accessCondition type="useAndReproduction">Use of this item is provided for non-commercial, personal, educational, and research use only. For information about the copyright and reproduction rights for this item, please contact Special Collections &amp; Archives, Florida State University Libraries, Tallahassee, Florida.</accessCondition>
+  <recordInfo>
+    <descriptionStandard>aacr2</descriptionStandard>
+  </recordInfo>
+  <location>
+    <physicalLocation>Special Collections &amp; Archives, Florida State University Libraries, Tallahassee, Florida.</physicalLocation>
+  </location>
+  <location displayLabel="purl">
+    <url>http://purl.flvc.org/fsu/fd/minaaddingFullMODS_GirlsOwnAnnual</url>
+  </location>
+</mods:mods>
