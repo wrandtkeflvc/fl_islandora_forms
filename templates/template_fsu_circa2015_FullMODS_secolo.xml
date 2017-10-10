@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSU</flvc:owningInstitution>
+      <flvc:submittingInstitution>FSU</flvc:submittingInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo lang="ita">
+    <nonSort>Il</nonSort>
+    <title>secolo</title>
+    <subTitle>Gazzetta di Milano</subTitle>
+  </titleInfo>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">newspaper</genre>
+  <originInfo>
+    <frequency>Daily</frequency>
+    <issuance>serial</issuance>
+    <place>
+      <placeTerm type="text">Milano</placeTerm>
+    </place>
+    <publisher>Sonzogno</publisher>
+    <dateIssued encoding="w3cdtf">2001-05-05</dateIssued>
+  </originInfo>
+  <language>
+    <languageTerm type="code" authority="iso639-2b">ita</languageTerm>
+    <languageTerm type="text" authority="iso639-2b">Italian</languageTerm>
+  </language>
+  <physicalDescription>
+    <digitalOrigin>digitized microfilm</digitalOrigin>
+  </physicalDescription>
+  <recordInfo>
+    <descriptionStandard>aacr2</descriptionStandard>
+  </recordInfo>
+  <accessCondition type="useAndReproduction">matchTarget</accessCondition>
+</mods:mods>
