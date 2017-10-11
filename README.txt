@@ -52,3 +52,5 @@ The MODS Simple Entry form has a few fields, and provides a less lengthy entry f
 On initially uploading an object to Islandora, users have the opportunity to upload a MARC record which will be crosswalked to and stored as a MODS datastream.  Users can later update the MODS datastream using the Full MODS form.  What is different from a basic Islandora install is that the Full MODS form allows touch ups to metadata that came in through a MARC record and crosswalked to MODS.  With a basic Islandora install, a user would only be able to edit the handful of fields available in the default MODS edit form for that content model.
 
 Florida State University is a development partner.  Their metadata librarian does MODS form work as well.  The FSU Libraries github is at https://github.com/fsulib/ and FSU's metadata librarian's github is at https://github.com/mrmiguez .
+
+For instructions on using templates with Islandora forms, refer to the README in the /templates/ directory of this repo.
