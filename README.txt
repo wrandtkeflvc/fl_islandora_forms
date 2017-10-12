@@ -32,7 +32,7 @@ The transform FLVC_MODS_postprocessing.xsl is versioned at https://github.com/FL
 Dublin Core labeled fields mapped to MODS.  This is not deployed on Florida Islandora sites at this time.
 
 
-How Florida Islandora deploys a new form across about 20 sites:  Once a form (or a new version of a form) is finalized on the development server, that form is copied over to the test and production servers via SSH.  Then a forms.pl script is run which updates the form across Islandora sites.
+How Florida Islandora deploys a new form across about 20 sites:  Once a form (or a new version of a form) is finalized on the development server, that form is installed to the test server (islandora-test) and form associations are set up and tested.  Then a forms.pl script is run which updates the form across Islandora test sites.  Then, the flvc:owningInstitution is set to autopopulate in each form (forms.pl updates all three forms even if only one changed).  Then that form is installed on a production site (floradora) and form assocations are set up and tested.  Then a forms.pl script is run which updates the forms across the Islandora production sites.  Then, the flvc:owningInstitution is set to autopopulate in each form (forms.pl updates all three forms even if only one changed).
 
 
 Background information on how Florida Islandora is using Islandora Forms: 
