@@ -36,6 +36,20 @@ Instructions for installing a template on an FLVC Islandora site
 Here's a list of templates which FLVC has installed on Islandora sites, and background on each template.
 ----------------------------------------------------------------------------------------------------------
 
+----
+FSJC
+----
+
+template_fscj_2017Oct_CampusVoice.xml
+Installed on FSCJ's site in October 2017.
+
+template_fscj_2017Oct_Kalliope.xml
+Installed on FSCJ's site in October 2017 for the serials.  Installed in December 2017 for the Newspaper Issue Content Model.  From Dec. 12 to 19, 2017, the form association did not include the MODS to DC transformation.
+
+---
+FSU
+---
+
 template_fsu_circa2014_FullMODS_Flambeau.xml
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_Flambeau".  That form is associated with the PDF content model, and this template is installed on that association.
 
@@ -44,6 +58,10 @@ Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_s
 
 template_fsu_circa2016_FullMODS_GirlsOwnAnnual.xml
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_GirlsOwnAnnual".  That form is associated with the PDF content model, and this template is installed on that association.
+
+---
+UCF
+---
 
 ucf_circa2014FHQFullMODS.xml
 Installed on UCF's site.  There is a duplicate Full MODS form named "Full MODS - FHQ".  That form is associated with the PDF content model only, and this template is installed on that association.
