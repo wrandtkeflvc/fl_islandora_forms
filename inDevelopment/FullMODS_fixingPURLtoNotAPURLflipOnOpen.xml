@@ -103,7 +103,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The institution that owns the digital object.</description>
+                  <description>The home FL-Islandora repository.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -159,13 +159,13 @@
                 </properties>
                 <children/>
               </element>
-              <element name="submittingInst">
+              <element name="submittingInstitution">
                 <properties>
                   <type>select</type>
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The institution submitting the digital object for ingest.</description>
+                  <description>The institution submitting the object.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -227,7 +227,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The name of a logo to display with the object in addition to the logo of the owning institution.</description>
+                  <description>A logo to display with objects in addition to the logo of the owning institution.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -10123,11 +10123,11 @@
                   <path>mods:location</path>
                   <context>parent</context>
                 </read>
-                <update>NULL</update>
-                <delete>
+                <update>
                   <path>self::node()</path>
                   <context>self</context>
-                </delete>
+                </update>
+                <delete>NULL</delete>
               </actions>
             </properties>
             <children>
@@ -10150,7 +10150,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
+                      <schema/>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>physicalLocation</value>
@@ -10187,6 +10187,25 @@
                   <resizable>FALSE</resizable>
                   <title>Type of URL</title>
                   <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>displayLabel</value>
+                    </create>
+                    <read>
+                      <path>@displayLabel</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
                 </properties>
                 <children/>
               </element>
@@ -10208,7 +10227,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
+                      <schema/>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>url</value>
