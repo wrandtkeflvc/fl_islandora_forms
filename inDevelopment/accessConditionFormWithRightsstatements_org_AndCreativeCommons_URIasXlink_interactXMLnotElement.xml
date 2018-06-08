@@ -591,18 +591,18 @@
           <multiple>FALSE</multiple>
           <options>
             <index key="">None</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/CNE/1.0/&quot;>COPYRIGHT NOT EVALUATED</accessCondition>">COPYRIGHT NOT EVALUATED</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/UND/1.0/&quot;>COPYRIGHT UNDETERMINED</accessCondition>">COPYRIGHT UNDETERMINED</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/NKC/1.0/&quot;>NO KNOWN COPYRIGHT</accessCondition>">NO KNOWN COPYRIGHT</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/NoC-US/1.0/&quot;>NO COPYRIGHT - UNITED STATES</accessCondition>">NO COPYRIGHT - UNITED STATES</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/NoC-OKLR/1.0/&quot;>NO COPYRIGHT - OTHER KNOWN LEGAL RESTRICTIONS</accessCondition>">NO COPYRIGHT - OTHER KNOWN LEGAL RESTRICTIONS</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/NoC-NC/1.0/&quot;>NO COPYRIGHT - NON-COMMERCIAL USE ONLY</accessCondition>">NO COPYRIGHT - NON-COMMERCIAL USE ONLY</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/NoC-CR/1.0/&quot;>NO COPYRIGHT - CONTRACTUAL RESTRICTIONS</accessCondition>">NO COPYRIGHT - CONTRACTUAL RESTRICTIONS</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/InC/1.0/&quot;>IN COPYRIGHT</accessCondition>">IN COPYRIGHT</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/InC-EDU/1.0/&quot;>IN COPYRIGHT - EDUCATIONAL USE PERMITTED</accessCondition>">IN COPYRIGHT - EDUCATIONAL USE PERMITTED</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/InC-RUU/1.0/&quot;>IN COPYRIGHT - RIGHTS-HOLDER(S) UNLOCATABLE OR UNIDENTIFIABLE</accessCondition>">IN COPYRIGHT - RIGHTS-HOLDER(S) UNLOCATABLE OR UNIDENTIFIABLE</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/InC-NC/1.0/&quot;>IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED</accessCondition>">IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED</index>
-            <index key="<accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://rightsstatements.org/vocab/InC-OW-EU/1.0/&quot;>IN COPYRIGHT - EU ORPHAN WORK</accessCondition>">IN COPYRIGHT - EU ORPHAN WORK</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/CNE/1.0/">COPYRIGHT NOT EVALUATED</accessCondition>">COPYRIGHT NOT EVALUATED</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/UND/1.0/">COPYRIGHT UNDETERMINED</accessCondition>">COPYRIGHT UNDETERMINED</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/NKC/1.0/">NO KNOWN COPYRIGHT</accessCondition>">NO KNOWN COPYRIGHT</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/NoC-US/1.0/">NO COPYRIGHT - UNITED STATES</accessCondition>">NO COPYRIGHT - UNITED STATES</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/NoC-OKLR/1.0/">NO COPYRIGHT - OTHER KNOWN LEGAL RESTRICTIONS</accessCondition>">NO COPYRIGHT - OTHER KNOWN LEGAL RESTRICTIONS</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/NoC-NC/1.0/">NO COPYRIGHT - NON-COMMERCIAL USE ONLY</accessCondition>">NO COPYRIGHT - NON-COMMERCIAL USE ONLY</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/NoC-CR/1.0/">NO COPYRIGHT - CONTRACTUAL RESTRICTIONS</accessCondition>">NO COPYRIGHT - CONTRACTUAL RESTRICTIONS</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/InC/1.0/">IN COPYRIGHT</accessCondition>">IN COPYRIGHT</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/InC-EDU/1.0/">IN COPYRIGHT - EDUCATIONAL USE PERMITTED</accessCondition>">IN COPYRIGHT - EDUCATIONAL USE PERMITTED</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/InC-RUU/1.0/">IN COPYRIGHT - RIGHTS-HOLDER(S) UNLOCATABLE OR UNIDENTIFIABLE</accessCondition>">IN COPYRIGHT - RIGHTS-HOLDER(S) UNLOCATABLE OR UNIDENTIFIABLE</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/InC-NC/1.0/">IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED</accessCondition>">IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED</index>
+            <index key="<accessCondition type="use and reproduction" xlink:href="http://rightsstatements.org/vocab/InC-OW-EU/1.0/">IN COPYRIGHT - EU ORPHAN WORK</accessCondition>">IN COPYRIGHT - EU ORPHAN WORK</index>
           </options>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
