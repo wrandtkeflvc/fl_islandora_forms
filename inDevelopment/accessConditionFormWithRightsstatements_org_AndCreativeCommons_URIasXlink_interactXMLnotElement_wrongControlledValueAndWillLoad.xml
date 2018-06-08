@@ -679,7 +679,7 @@
                   <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='https://creativecommons.org/licenses/by/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-sa/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-nd/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-nc/4.0/' or @xlink:href='https://creativecommons.org/licenses/by-nc-sa/4.0/']</path>
+                  <path>mods:accessCondition[@type='use and reproduction' and @xlink:href='http://creativecommons.org/licenses/by/4.0/' or @xlink:href='http://creativecommons.org/licenses/by-sa/4.0/' or @xlink:href='http://creativecommons.org/licenses/by-nd/4.0/' or @xlink:href='http://creativecommons.org/licenses/by-nc/4.0/' or @xlink:href='http://creativecommons.org/licenses/by-nc-sa/4.0/']</path>
                   <context>parent</context>
                 </read>
                 <update>NULL</update>
@@ -727,6 +727,50 @@
                 </properties>
                 <children/>
               </element>
+              <element name="xlink">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="http://creativecommons.org/licenses/by/4.0/">Attribution (CC BY 4.0)</index>
+                    <index key="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike (CC BY-SA 4.0)</index>
+                    <index key="http://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives (CC BY-ND 4.0)</index>
+                    <index key="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial (CC BY-NC 4.0)</index>
+                    <index key="http://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 4.0)</index>
+                    <index key="http://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND 4.0)</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>XLink</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>xlink</prefix>
+                      <value>xlink:href</value>
+                    </create>
+                    <read>
+                      <path>@xlink:href</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
               <element name="value">
                 <properties>
                   <type>select</type>
@@ -739,12 +783,12 @@
                   <multiple>FALSE</multiple>
                   <options>
                     <index key=""/>
-                    <index key="http://creativecommons.org/licenses/by/4.0/">Attribution (CC BY 4.0) ( http://creativecommons.org/licenses/by/4.0/ )</index>
-                    <index key="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike (CC BY-SA 4.0) ( http://creativecommons.org/licenses/by-sa/4.0/ )</index>
-                    <index key="http://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives (CC BY-ND 4.0) ( http://creativecommons.org/licenses/by-nd/4.0/ )</index>
-                    <index key="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial (CC BY-NC 4.0) ( http://creativecommons.org/licenses/by-nc/4.0/ )</index>
-                    <index key="http://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 4.0) ( http://creativecommons.org/licenses/by-nc-sa/4.0/ )</index>
-                    <index key="http://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND 4.0) ( http://creativecommons.org/licenses/by-nc-nd/4.0/ )</index>
+                    <index key="Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution&quot; 4.0 International (CC BY 4.0) License (https://creativecommons.org/licenses/by/4.0/).">Attribution (CC BY 4.0)</index>
+                    <index key="Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-ShareAlike&quot; 4.0 International (CC BY-SA 4.0) License (https://creativecommons.org/licenses/by-sa/4.0/).">Attribution-ShareAlike (CC BY-SA 4.0)</index>
+                    <index key="Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-NoDerivatives&quot; 4.0 International (CC BY-ND 4.0) License (https://creativecommons.org/licenses/by-nd/4.0/).">Attribution-NoDerivatives (CC BY-ND 4.0)</index>
+                    <index key="Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-NonCommercial&quot; 4.0 International (CC BY-NC 4.0) License (https://creativecommons.org/licenses/by-nc/4.0/).">Attribution-NonCommercial (CC BY-NC 4.0)</index>
+                    <index key="Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-NonCommercial-ShareAlike&quot; 4.0 International (CC BY-NC-SA 4.0) License (https://creativecommons.org/licenses/by-nc-sa/4.0/).">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 4.0)</index>
+                    <index key="Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-NonCommercial-NoDerivatives&quot; 4.0 International (CC BY-NC-ND 4.0) License (https://creativecommons.org/licenses/by-nc-nd/4.0/).">Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND 4.0)</index>
                   </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
