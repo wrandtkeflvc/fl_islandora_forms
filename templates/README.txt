@@ -11,7 +11,7 @@ Instructions for installing a template on an FLVC Islandora site
 3)  Download the MODS for that object.  Click to the object, click to the "Manage" tab, click to the "Datastreams" tab, click to "export" the MODS.
 
 4)  Manually delete the following fields:
-* Delete the <identifier type="doi"> field.
+* Delete the <identifier type="IID"> field.
 * Delete the <location displayLabel="purl"><url> field.
 * Consider deleting the <titleInfo><title> field.  This is an FLVC required field.  You might want it in your template, but you might not.
 * Consider deleting the <dateIssued> (might be <dateIssued encoding="w3cdtf"> ) field.  This is a required field for the Newspaper Issue content model. You might want it in your template, but you might not.
