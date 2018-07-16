@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSCJ</flvc:owningInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo type="uniform">
+    <title>Alpha.</title>
+  </titleInfo>
+  <identifier type="oclc">1043903453</identifier>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">newspaper</genre>
+  <originInfo>
+    <frequency>Irregular</frequency>
+    <issuance>serial</issuance>
+    <place>
+      <placeTerm type="text">Jacksonville, FL</placeTerm>
+    </place>
+    <publisher>Florida Junior College</publisher>
+  </originInfo>
+  <subject>
+    <topic>Florida State College at Jacksonville – Periodicals</topic>
+  </subject>
+  <subject>
+    <topic>Florida State College at Jacksonville -- Newspapers</topic>
+  </subject>
+  <subject>
+    <topic>Florida Community College at Jacksonville -- Periodicals</topic>
+  </subject>
+  <subject authority="lcsh">
+    <topic>College student newspapers and periodicals -- Florida -- Jacksonville</topic>
+  </subject>
+  <accessCondition type="useAndReproduction">Copyright Florida State College at Jacksonville. This Item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder(s) for educational uses. For other uses, you need to obtain permission from the rights-holder(s).</accessCondition>
+  <accessCondition type="useAndReproduction">Copyright Florida State College at Jacksonville.</accessCondition>
+  <physicalDescription>
+    <form>text</form>
+    <form>Some issues missing.</form>
+    <extent>Vol. 2, No.6 (March 5, 1968) – Vol. 3, Issue 9 (March 27, 1969)</extent>
+  </physicalDescription>
+  <note>Alpha is the college-sponsored, student-run publication that served Florida Junior College. Articles represent those writing the articles, and do not necessarily represent the opinions or views of Florida Junior College.&#13;
+&#13;
+Alpha was later superseded by the student newspaper The Campus Voice
+   </note>
+</mods:mods>

@@ -46,6 +46,17 @@ Installed on FSCJ's site in October 2017.
 template_fscj_2017Oct_Kalliope.xml
 Installed on FSCJ's site in October 2017 for the serials.  Installed in December 2017 for the Newspaper Issue Content Model.  From Dec. 12 to 19, 2017, the form association did not include the MODS to DC transformation.
 
+template_fscj_spring2018_WorthQuoting
+Installed April 2018 on FSCJ's production site (installed on production before being installed on test).
+
+template_fscj_spring2018_WriterToWriter
+Installed April 2018 on FSCJ's production site (installed on production before being installed on test).
+
+template_fscj_2018Summer_Alpha.xml
+Installed July 2018 on fscj-test .
+Issues with FSCJ Alpha template: Maybe add a RightsStatements.org value.  (
+<accessCondition type="useAndReproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC-OW-EU/1.0/</accessCondition>
+
 ---
 FSU
 ---
