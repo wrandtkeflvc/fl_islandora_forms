@@ -533,7 +533,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Use and Reproduction</title>
+          <title>Access Condition:  Use and Reproduction</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -648,7 +648,7 @@
               <element name="type">
                 <properties>
                   <type>select</type>
-                  <access>TRUE</access>
+                  <access>FALSE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <disabled>FALSE</disabled>
@@ -685,7 +685,7 @@
               <element name="displayLabel">
                 <properties>
                   <type>select</type>
-                  <access>TRUE</access>
+                  <access>FALSE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <disabled>FALSE</disabled>
@@ -826,7 +826,7 @@
               <element name="type">
                 <properties>
                   <type>select</type>
-                  <access>TRUE</access>
+                  <access>FALSE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <disabled>FALSE</disabled>
@@ -863,7 +863,7 @@
               <element name="displayLabel">
                 <properties>
                   <type>select</type>
-                  <access>TRUE</access>
+                  <access>FALSE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
                   <disabled>FALSE</disabled>
