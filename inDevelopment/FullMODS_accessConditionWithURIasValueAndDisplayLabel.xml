@@ -9976,8 +9976,17 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Use and reproduction</title>
+          <title>Use and Reproduction</title>
           <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
         </properties>
         <children>
           <element name="0">
@@ -9999,10 +10008,10 @@
                   <schema/>
                   <type>xml</type>
                   <prefix>NULL</prefix>
-                  <value>&lt;accessCondition type="useAndReproduction"&gt;%value%&lt;/accessCondition&gt;</value>
+                  <value>&lt;accessCondition type="use and reproduction"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>/mods:mods/mods:accessCondition[(node() and @type='useAndReproduction' or @type='use and reproduction')]</path>
+                  <path>/mods:mods/mods:accessCondition[(node() and (@type='useAndReproduction'  or @type='use and reproduction')) and not(@displayLabel='RightsStatements.org') and not(@displayLabel='Creative Commons')]</path>
                   <context>document</context>
                 </read>
                 <update>
@@ -10016,6 +10025,360 @@
               </actions>
             </properties>
             <children/>
+          </element>
+        </children>
+      </element>
+      <element name="controlledAccessCondition_rightsstatements_org">
+        <properties>
+          <type>fieldset</type>
+          <access>TRUE</access>
+          <attributes>
+            <index key=""/>
+          </attributes>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Access Condition:  RightsStatements</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>fieldset</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>accessCondition</value>
+                </create>
+                <read>
+                  <path>mods:accessCondition[@type='use and reproduction' and @displayLabel='RightsStatements.org']</path>
+                  <context>parent</context>
+                </read>
+                <update>NULL</update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="type">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="use and reproduction">use and reproduction</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type</value>
+                    </create>
+                    <read>
+                      <path>@type</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="displayLabel">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="RightsStatements.org">RightsStatements.org</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>displayLabel</value>
+                    </create>
+                    <read>
+                      <path>@displayLabel</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="value">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A rightsstatements.org value.  (Must be identical to xlink value.)</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright ( http://rightsstatements.org/vocab/InC/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/InC-EDU/1.0/">In Copyright - Educational Use Permitted ( http://rightsstatements.org/vocab/InC-EDU/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/InC-NC/1.0/">In Copyright - Non-Commercial Use Permitted ( http://rightsstatements.org/vocab/InC-NC/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/InC-RUU/1.0/">In Copyright - Rights-holder(s) Unlocatable or Unidentifiable ( http://rightsstatements.org/vocab/InC-RUU/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-CR/1.0/">No Copyright - Contractual Restrictions ( http://rightsstatements.org/vocab/NoC-CR/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-NC/1.0/">No Copyright - Non-Commercial Use Only ( http://rightsstatements.org/vocab/NoC-NC/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-OKLR/1.0/">No Copyright - Other Known Legal Restrictions ( http://rightsstatements.org/vocab/NoC-OKLR/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-US/1.0/">No Copyright - United States ( http://rightsstatements.org/vocab/NoC-US/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated ( http://rightsstatements.org/vocab/CNE/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined ( http://rightsstatements.org/vocab/UND/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright ( http://rightsstatements.org/vocab/NKC/1.0/ )</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>RightsStatements.orgValue</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>NULL</create>
+                    <read>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
+          </element>
+        </children>
+      </element>
+      <element name="controlledAccessCondition_creativeCommons">
+        <properties>
+          <type>fieldset</type>
+          <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Access Condition:  Creative Commons licenses</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>fieldset</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>accessCondition</value>
+                </create>
+                <read>
+                  <path>mods:accessCondition[@type='use and reproduction' and @displayLabel='Creative Commons']</path>
+                  <context>parent</context>
+                </read>
+                <update>NULL</update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="type">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="use and reproduction">use and reproduction</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type</value>
+                    </create>
+                    <read>
+                      <path>@type</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="displayLabel">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="Creative Commons">Creative Commons</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>displayLabel</value>
+                    </create>
+                    <read>
+                      <path>@displayLabel</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="value">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A Creative Commons value.  (Must be identical to xlink value.)</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="http://creativecommons.org/licenses/by/4.0/">Attribution (CC BY 4.0) ( http://creativecommons.org/licenses/by/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike (CC BY-SA 4.0) ( http://creativecommons.org/licenses/by-sa/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives (CC BY-ND 4.0) ( http://creativecommons.org/licenses/by-nd/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial (CC BY-NC 4.0) ( http://creativecommons.org/licenses/by-nc/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 4.0) ( http://creativecommons.org/licenses/by-nc-sa/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND 4.0) ( http://creativecommons.org/licenses/by-nc-nd/4.0/ )</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>CreativeCommonsValue</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>NULL</create>
+                    <read>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
           </element>
         </children>
       </element>

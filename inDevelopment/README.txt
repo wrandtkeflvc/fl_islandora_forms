@@ -1,8 +1,11 @@
-accessConditionFormWithRightsstatements_org_AndCreativeCommons.xml
-form with open uncontrolled copyright statements, and rightsstatements.org copyright statements, and Creative Commons copyright statements from the same record all in the appropriate field.
+accessConditionFormWithRightsstatements_org_AndCreativeCommons_URIasValue_displayLabel.xml
 
-The fix that needs to be done on this is:
-At this time, the xlink and the human readable value are separately entered.  Those should be coupled together.
+Just the accessCondition fields and the bare minimum of required fields.  This stores the URI for RightsStatements.org or for Creative Commons as the value of the accessCondition element and uses a displayLabel attribute to separate off RightsStatements.org values and Creative Commons values from uncontrolled values.
+
+
+FullMODS_accessConditionWithURIasValueAndDisplayLabel.xml
+
+The Full MODS form with RightsStatements.org and Creative Commons added.
 
 
 FullMODS_fixingPURLtoNotAPURLflipOnOpen.xml
