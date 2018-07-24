@@ -70,10 +70,11 @@ template_fsu_circa2014_FullMODS_Flambeau.xml
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_Flambeau".  That form is associated with the PDF content model, and this template is installed on that association.
 
 template_fsu_circa2015_FullMODS_secolo.xml
-Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_secolo".  That form is associated with the PDF content model, and this template is installed on that association.
+Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_secolo".  In 2016, this template was associated with the PDF content model.  As of 2018, this template is retired.
 
 template_fsu_circa2016_FullMODS_GirlsOwnAnnual.xml
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_GirlsOwnAnnual".  That form is associated with the PDF content model, and this template is installed on that association.
+In 2016, this template was associated with the PDF content model.  In 2017/2018, this template was installed on rootSerialCModel and on intermediateCModel .
 
 ---
 UCF
