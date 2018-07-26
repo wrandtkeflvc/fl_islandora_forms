@@ -9976,7 +9976,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Access Condition: Use and Reproduction</title>
+          <title>Access Condition:  Use and Reproduction</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -10069,18 +10069,21 @@
               <tree>TRUE</tree>
               <actions>
                 <create>
-                  <path>self::node()</path>
-                  <context>parent</context>
+                  <path>/mods:mods</path>
+                  <context>document</context>
                   <schema/>
-                  <type>element</type>
+                  <type>xml</type>
                   <prefix>NULL</prefix>
-                  <value>accessCondition</value>
+                  <value>&lt;accessCondition type="use and reproduction" displayLabel="RightsStatements.org"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition[@type='use and reproduction' and @displayLabel='RightsStatements.org']</path>
-                  <context>parent</context>
+                  <path>/mods:mods/mods:accessCondition[@type='use and reproduction' and @displayLabel='RightsStatements.org']</path>
+                  <context>document</context>
                 </read>
-                <update>NULL</update>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
                 <delete>
                   <path>self::node()</path>
                   <context>self</context>
@@ -10088,82 +10091,6 @@
               </actions>
             </properties>
             <children>
-              <element name="type">
-                <properties>
-                  <type>select</type>
-                  <access>TRUE</access>
-                  <collapsed>TRUE</collapsed>
-                  <collapsible>TRUE</collapsible>
-                  <default_value>use and reproduction</default_value>
-                  <disabled>FALSE</disabled>
-                  <executes_submit_callback>FALSE</executes_submit_callback>
-                  <multiple>FALSE</multiple>
-                  <options>
-                    <index key="use and reproduction">use and reproduction</index>
-                  </options>
-                  <required>FALSE</required>
-                  <resizable>FALSE</resizable>
-                  <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema/>
-                      <type>attribute</type>
-                      <prefix>NULL</prefix>
-                      <value>type</value>
-                    </create>
-                    <read>
-                      <path>@type</path>
-                      <context>parent</context>
-                    </read>
-                    <update>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </update>
-                    <delete>NULL</delete>
-                  </actions>
-                </properties>
-                <children/>
-              </element>
-              <element name="displayLabel">
-                <properties>
-                  <type>select</type>
-                  <access>TRUE</access>
-                  <collapsed>TRUE</collapsed>
-                  <collapsible>TRUE</collapsible>
-                  <default_value>RightsStatements.org</default_value>
-                  <disabled>FALSE</disabled>
-                  <executes_submit_callback>FALSE</executes_submit_callback>
-                  <multiple>FALSE</multiple>
-                  <options>
-                    <index key="RightsStatements.org">RightsStatements.org</index>
-                  </options>
-                  <required>FALSE</required>
-                  <resizable>FALSE</resizable>
-                  <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema/>
-                      <type>attribute</type>
-                      <prefix>NULL</prefix>
-                      <value>displayLabel</value>
-                    </create>
-                    <read>
-                      <path>@displayLabel</path>
-                      <context>parent</context>
-                    </read>
-                    <update>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </update>
-                    <delete>NULL</delete>
-                  </actions>
-                </properties>
-                <children/>
-              </element>
               <element name="value">
                 <properties>
                   <type>select</type>
@@ -10249,18 +10176,21 @@
               <tree>TRUE</tree>
               <actions>
                 <create>
-                  <path>self::node()</path>
-                  <context>parent</context>
+                  <path>/mods:mods</path>
+                  <context>document</context>
                   <schema/>
-                  <type>element</type>
+                  <type>xml</type>
                   <prefix>NULL</prefix>
-                  <value>accessCondition</value>
+                  <value>&lt;accessCondition type="use and reproduction" displayLabel="Creative Commons"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition[@type='use and reproduction' and @displayLabel='Creative Commons']</path>
-                  <context>parent</context>
+                  <path>/mods:mods/mods:accessCondition[@type='use and reproduction' and @displayLabel='Creative Commons']</path>
+                  <context>document</context>
                 </read>
-                <update>NULL</update>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
                 <delete>
                   <path>self::node()</path>
                   <context>self</context>
@@ -10268,82 +10198,6 @@
               </actions>
             </properties>
             <children>
-              <element name="type">
-                <properties>
-                  <type>select</type>
-                  <access>TRUE</access>
-                  <collapsed>TRUE</collapsed>
-                  <collapsible>TRUE</collapsible>
-                  <default_value>use and reproduction</default_value>
-                  <disabled>FALSE</disabled>
-                  <executes_submit_callback>FALSE</executes_submit_callback>
-                  <multiple>FALSE</multiple>
-                  <options>
-                    <index key="use and reproduction">use and reproduction</index>
-                  </options>
-                  <required>FALSE</required>
-                  <resizable>FALSE</resizable>
-                  <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema/>
-                      <type>attribute</type>
-                      <prefix>NULL</prefix>
-                      <value>type</value>
-                    </create>
-                    <read>
-                      <path>@type</path>
-                      <context>parent</context>
-                    </read>
-                    <update>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </update>
-                    <delete>NULL</delete>
-                  </actions>
-                </properties>
-                <children/>
-              </element>
-              <element name="displayLabel">
-                <properties>
-                  <type>select</type>
-                  <access>TRUE</access>
-                  <collapsed>TRUE</collapsed>
-                  <collapsible>TRUE</collapsible>
-                  <default_value>Creative Commons</default_value>
-                  <disabled>FALSE</disabled>
-                  <executes_submit_callback>FALSE</executes_submit_callback>
-                  <multiple>FALSE</multiple>
-                  <options>
-                    <index key="Creative Commons">Creative Commons</index>
-                  </options>
-                  <required>FALSE</required>
-                  <resizable>FALSE</resizable>
-                  <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema/>
-                      <type>attribute</type>
-                      <prefix>NULL</prefix>
-                      <value>displayLabel</value>
-                    </create>
-                    <read>
-                      <path>@displayLabel</path>
-                      <context>parent</context>
-                    </read>
-                    <update>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </update>
-                    <delete>NULL</delete>
-                  </actions>
-                </properties>
-                <children/>
-              </element>
               <element name="value">
                 <properties>
                   <type>select</type>
