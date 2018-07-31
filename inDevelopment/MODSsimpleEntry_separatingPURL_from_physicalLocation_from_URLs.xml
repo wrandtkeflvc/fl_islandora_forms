@@ -2251,10 +2251,10 @@
                   <schema/>
                   <type>element</type>
                   <prefix>NULL</prefix>
-                  <value>&lt;location displayLabel="PURL&gt;%value%&lt;/location&gt;</value>
+                  <value>&lt;location displayLabel="purl"&gt;%value%&lt;/location&gt;</value>
                 </create>
                 <read>
-                  <path>mods:location</path>
+                  <path>mods:location[@displayLabel='purl']</path>
                   <context>parent</context>
                 </read>
                 <update>
@@ -2352,7 +2352,7 @@
                   <value>location</value>
                 </create>
                 <read>
-                  <path>mods:location</path>
+                  <path>mods:location[not(@displayLabel='purl')]</path>
                   <context>parent</context>
                 </read>
                 <update>
