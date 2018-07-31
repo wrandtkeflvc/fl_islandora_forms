@@ -103,7 +103,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The home FL-Islandora repository.</description>
+                  <description>The institution that owns the digital object.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -159,13 +159,13 @@
                 </properties>
                 <children/>
               </element>
-              <element name="submittingInstitution">
+              <element name="submittingInst">
                 <properties>
                   <type>select</type>
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The institution submitting the object.</description>
+                  <description>The institution submitting the digital object for ingest.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -227,7 +227,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>A logo to display with objects in addition to the logo of the owning institution.</description>
+                  <description>The name of a logo to display with the object in addition to the logo of the owning institution.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -4491,10 +4491,7 @@
                       <path>self::node()</path>
                       <context>parent</context>
                     </update>
-                    <delete>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </delete>
+                    <delete>NULL</delete>
                   </actions>
                 </properties>
                 <children/>
@@ -9979,8 +9976,17 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Use and reproduction</title>
+          <title>Access Condition:  Use and Reproduction</title>
           <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
         </properties>
         <children>
           <element name="0">
@@ -10002,10 +10008,10 @@
                   <schema/>
                   <type>xml</type>
                   <prefix>NULL</prefix>
-                  <value>&lt;accessCondition type="useAndReproduction"&gt;%value%&lt;/accessCondition&gt;</value>
+                  <value>&lt;accessCondition type="use and reproduction"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
-                  <path>/mods:mods/mods:accessCondition[(node() and @type='useAndReproduction' or @type='use and reproduction')]</path>
+                  <path>/mods:mods/mods:accessCondition[(node() and (@type='useAndReproduction'  or @type='use and reproduction')) and not(@displayLabel='RightsStatements.org') and not(@displayLabel='Creative Commons')]</path>
                   <context>document</context>
                 </read>
                 <update>
@@ -10019,6 +10025,218 @@
               </actions>
             </properties>
             <children/>
+          </element>
+        </children>
+      </element>
+      <element name="controlledAccessCondition_rightsstatements_org">
+        <properties>
+          <type>fieldset</type>
+          <access>TRUE</access>
+          <attributes>
+            <index key=""/>
+          </attributes>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Access Condition:  RightsStatements</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>fieldset</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>/mods:mods</path>
+                  <context>document</context>
+                  <schema/>
+                  <type>xml</type>
+                  <prefix>NULL</prefix>
+                  <value>&lt;accessCondition type="use and reproduction" displayLabel="RightsStatements.org"&gt;%value%&lt;/accessCondition&gt;</value>
+                </create>
+                <read>
+                  <path>/mods:mods/mods:accessCondition[@type='use and reproduction' and @displayLabel='RightsStatements.org']</path>
+                  <context>document</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="value">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A rightsstatements.org value.  (Must be identical to xlink value.)</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright ( http://rightsstatements.org/vocab/InC/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/InC-EDU/1.0/">In Copyright - Educational Use Permitted ( http://rightsstatements.org/vocab/InC-EDU/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/InC-NC/1.0/">In Copyright - Non-Commercial Use Permitted ( http://rightsstatements.org/vocab/InC-NC/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/InC-RUU/1.0/">In Copyright - Rights-holder(s) Unlocatable or Unidentifiable ( http://rightsstatements.org/vocab/InC-RUU/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-CR/1.0/">No Copyright - Contractual Restrictions ( http://rightsstatements.org/vocab/NoC-CR/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-NC/1.0/">No Copyright - Non-Commercial Use Only ( http://rightsstatements.org/vocab/NoC-NC/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-OKLR/1.0/">No Copyright - Other Known Legal Restrictions ( http://rightsstatements.org/vocab/NoC-OKLR/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-US/1.0/">No Copyright - United States ( http://rightsstatements.org/vocab/NoC-US/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated ( http://rightsstatements.org/vocab/CNE/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined ( http://rightsstatements.org/vocab/UND/1.0/ )</index>
+                    <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright ( http://rightsstatements.org/vocab/NKC/1.0/ )</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>RightsStatements.orgValue</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>NULL</create>
+                    <read>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
+          </element>
+        </children>
+      </element>
+      <element name="controlledAccessCondition_creativeCommons">
+        <properties>
+          <type>fieldset</type>
+          <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Access Condition:  Creative Commons licenses</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>fieldset</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>/mods:mods</path>
+                  <context>document</context>
+                  <schema/>
+                  <type>xml</type>
+                  <prefix>NULL</prefix>
+                  <value>&lt;accessCondition type="use and reproduction" displayLabel="Creative Commons"&gt;%value%&lt;/accessCondition&gt;</value>
+                </create>
+                <read>
+                  <path>/mods:mods/mods:accessCondition[@type='use and reproduction' and @displayLabel='Creative Commons']</path>
+                  <context>document</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="value">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A Creative Commons value.  (Must be identical to xlink value.)</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key=""/>
+                    <index key="http://creativecommons.org/licenses/by/4.0/">Attribution (CC BY 4.0) ( http://creativecommons.org/licenses/by/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike (CC BY-SA 4.0) ( http://creativecommons.org/licenses/by-sa/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nd/4.0/">Attribution-NoDerivatives (CC BY-ND 4.0) ( http://creativecommons.org/licenses/by-nd/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial (CC BY-NC 4.0) ( http://creativecommons.org/licenses/by-nc/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 4.0) ( http://creativecommons.org/licenses/by-nc-sa/4.0/ )</index>
+                    <index key="http://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND 4.0) ( http://creativecommons.org/licenses/by-nc-nd/4.0/ )</index>
+                  </options>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>CreativeCommonsValue</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>NULL</create>
+                    <read>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
           </element>
         </children>
       </element>
@@ -10077,6 +10295,374 @@
           </element>
         </children>
       </element>
+      <element name="location-url-PURL">
+        <properties>
+          <type>tabs</type>
+          <access>TRUE</access>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Location: PURL(s)</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>tabpanel</type>
+              <access>TRUE</access>
+              <collapsed>TRUE</collapsed>
+              <collapsible>TRUE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>&lt;location displayLabel="purl"&gt;%value%&lt;/location&gt;</value>
+                </create>
+                <read>
+                  <path>mods:location[@displayLabel='purl']</path>
+                  <context>parent</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="PURL">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <collapsed>TRUE</collapsed>
+                  <collapsible>TRUE</collapsible>
+                  <description>The PURL of the resource.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>PURL</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>element</type>
+                      <prefix>NULL</prefix>
+                      <value>url</value>
+                    </create>
+                    <read>
+                      <path>mods:url</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
+          </element>
+        </children>
+      </element>
+      <element name="location-url">
+        <properties>
+          <type>tabs</type>
+          <access>TRUE</access>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
+          <description>Other URLs where the resource can be found.</description>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Location: Other URLs</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>tabpanel</type>
+              <access>TRUE</access>
+              <collapsed>TRUE</collapsed>
+              <collapsible>TRUE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>location</value>
+                </create>
+                <read>
+                  <path>mods:location[not(@displayLabel='purl')]</path>
+                  <context>parent</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="URL">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>The URL of the resource.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>URL</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>element</type>
+                      <prefix>NULL</prefix>
+                      <value>url</value>
+                    </create>
+                    <read>
+                      <path>mods:url</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="URL display label">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <description>Anchor text to display instead of the URL or PURL.</description>
+                  <required>FALSE</required>
+                  <title>URL Display Label</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>mods:url</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>displayLabel</value>
+                    </create>
+                    <read>
+                      <path>mods:url/@displayLabel</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="urlNote">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <description>A public note that will display after the URL.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>URL note</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>mods:url</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>note</value>
+                    </create>
+                    <read>
+                      <path>mods:url/@note</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
+          </element>
+        </children>
+      </element>
+      <element name="location-physicalLocation">
+        <properties>
+          <type>tabs</type>
+          <access>TRUE</access>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
+          <description>Other URLs where the resource can be found.</description>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Location: Physical Location</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>NULL</create>
+            <read>
+              <path>/mods:mods</path>
+              <context>document</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="0">
+            <properties>
+              <type>tabpanel</type>
+              <access>TRUE</access>
+              <collapsed>TRUE</collapsed>
+              <collapsible>TRUE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>location</value>
+                </create>
+                <read>
+                  <path>mods:location</path>
+                  <context>parent</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children>
+              <element name="physicalLocation">
+                <properties>
+                  <type>textfield</type>
+                  <access>TRUE</access>
+                  <collapsed>TRUE</collapsed>
+                  <collapsible>TRUE</collapsible>
+                  <description>The institution or repository that holds the resource or where it is available.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>Physical location</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>element</type>
+                      <prefix>NULL</prefix>
+                      <value>physicalLocation</value>
+                    </create>
+                    <read>
+                      <path>mods:physicalLocation</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
+          </element>
+        </children>
+      </element>
       <element name="location">
         <properties>
           <type>tabs</type>
@@ -10126,11 +10712,11 @@
                   <path>mods:location</path>
                   <context>parent</context>
                 </read>
-                <update>
+                <update>NULL</update>
+                <delete>
                   <path>self::node()</path>
                   <context>self</context>
-                </update>
-                <delete>NULL</delete>
+                </delete>
               </actions>
             </properties>
             <children>
@@ -10153,7 +10739,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema/>
+                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>physicalLocation</value>
@@ -10190,25 +10776,6 @@
                   <resizable>FALSE</resizable>
                   <title>Type of URL</title>
                   <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema/>
-                      <type>attribute</type>
-                      <prefix>NULL</prefix>
-                      <value>displayLabel</value>
-                    </create>
-                    <read>
-                      <path>@displayLabel</path>
-                      <context>parent</context>
-                    </read>
-                    <update>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </update>
-                    <delete>NULL</delete>
-                  </actions>
                 </properties>
                 <children/>
               </element>
@@ -10230,7 +10797,7 @@
                     <create>
                       <path>self::node()</path>
                       <context>parent</context>
-                      <schema/>
+                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
                       <type>element</type>
                       <prefix>NULL</prefix>
                       <value>url</value>
