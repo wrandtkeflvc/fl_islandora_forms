@@ -2212,14 +2212,14 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>PURL(s)</title>
+          <title>Location: PURL(s)</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -2236,8 +2236,8 @@
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
+              <collapsed>TRUE</collapsed>
+              <collapsible>TRUE</collapsible>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
@@ -2261,7 +2261,10 @@
                   <path>self::node()</path>
                   <context>self</context>
                 </update>
-                <delete>NULL</delete>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
               </actions>
             </properties>
             <children>
@@ -2269,8 +2272,8 @@
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
-                  <collapsed>FALSE</collapsed>
-                  <collapsible>FALSE</collapsible>
+                  <collapsed>TRUE</collapsed>
+                  <collapsible>TRUE</collapsible>
                   <description>The PURL of the resource.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
@@ -2309,15 +2312,15 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <description>Other URLs where the resource can be found.</description>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Other URLs</title>
+          <title>Location: Other URLs</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -2334,8 +2337,8 @@
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
+              <collapsed>TRUE</collapsed>
+              <collapsible>TRUE</collapsible>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
@@ -2359,7 +2362,10 @@
                   <path>self::node()</path>
                   <context>self</context>
                 </update>
-                <delete>NULL</delete>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
               </actions>
             </properties>
             <children>
@@ -2435,7 +2441,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>A public note that will display after the URL or PURL.</description>
+                  <description>A public note that will display after the URL.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -2473,15 +2479,15 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
+          <collapsed>TRUE</collapsed>
+          <collapsible>TRUE</collapsible>
           <description>Other URLs where the resource can be found.</description>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Physical Location</title>
+          <title>Location: Physical Location</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -2498,8 +2504,8 @@
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
+              <collapsed>TRUE</collapsed>
+              <collapsible>TRUE</collapsible>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
@@ -2523,7 +2529,10 @@
                   <path>self::node()</path>
                   <context>self</context>
                 </update>
-                <delete>NULL</delete>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
               </actions>
             </properties>
             <children>
@@ -2531,8 +2540,8 @@
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
-                  <collapsed>FALSE</collapsed>
-                  <collapsible>FALSE</collapsible>
+                  <collapsed>TRUE</collapsed>
+                  <collapsible>TRUE</collapsible>
                   <description>The institution or repository that holds the resource or where it is available.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
