@@ -2355,8 +2355,8 @@
                   <value>location</value>
                 </create>
                 <read>
-                  <path>mods:location[not(@displayLabel='purl')]</path>
-                  <context>parent</context>
+                  <path>mods:location[not(@displayLabel='purl')]/mods:url</path>
+                  <context>document</context>
                 </read>
                 <update>
                   <path>self::node()</path>
@@ -2393,7 +2393,7 @@
                       <value>url</value>
                     </create>
                     <read>
-                      <path>mods:url</path>
+                      <path>self::node()</path>
                       <context>parent</context>
                     </read>
                     <update>
@@ -2522,7 +2522,7 @@
                   <value>location</value>
                 </create>
                 <read>
-                  <path>mods:location[not(@displayLabel='purl')]</path>
+                  <path>mods:location[not(@displayLabel='purl')]/mods:physicalLocation</path>
                   <context>parent</context>
                 </read>
                 <update>
@@ -2560,7 +2560,7 @@
                       <value>physicalLocation</value>
                     </create>
                     <read>
-                      <path>mods:physicalLocation</path>
+                      <path>self::node()</path>
                       <context>parent</context>
                     </read>
                     <update>
