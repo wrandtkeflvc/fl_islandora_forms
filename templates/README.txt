@@ -40,8 +40,12 @@ Here's a list of templates which FLVC has installed on Islandora sites, and back
 FSJC
 ----
 
-template_fscj_2017Oct_CampusVoice.xml
+RETIRED template_fscj_2017Oct_CampusVoice.xml RETIRED
 Installed on FSCJ's site in October 2017.
+Retired Aug. 1, 2018.
+
+template_fscj_2018Aug_CampusVoice.xml
+Installed Aug. 1, 2018.
 
 RETIRED template_fscj_2017Oct_Kalliope.xml RETIRED
 Installed on FSCJ's site in October 2017 for the serials.  Installed in December 2017 for the Newspaper Issue Content Model.  From Dec. 12 to 19, 2017, the form association did not include the MODS to DC transformation.
