@@ -74,11 +74,13 @@ RightsStatements.org value added Aug. 1, 2018.
 FSU
 ---
 
-template_fsu_circa2014_FullMODS_Flambeau.xml
+RETIRED template_fsu_circa2014_FullMODS_Flambeau.xml RETIRED
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_Flambeau".  That form is associated with the PDF content model, and this template is installed on that association.
+Noted in summer 2018 that the form has no form associations (ie. has been retired from use by FSU).
 
-template_fsu_circa2015_FullMODS_secolo.xml
+RETIRED template_fsu_circa2015_FullMODS_secolo.xml RETIRED
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_secolo".  In 2016, this template was associated with the PDF content model.  As of 2018, this template is retired.
+Noted in summer 2018 that the form has no form associations (ie. has been retired from use by FSU).
 
 template_fsu_circa2016_FullMODS_GirlsOwnAnnual.xml
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_GirlsOwnAnnual".  That form is associated with the PDF content model, and this template is installed on that association.
