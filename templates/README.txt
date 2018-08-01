@@ -54,13 +54,11 @@ Installed April 2018 on FSCJ's production site (installed on production before b
 
 template_fscj_2018summer_Alpha.xml
 Installed July 2018 on fscj-test .
-Issues with FSCJ Alpha template: Maybe add a RightsStatements.org value.  (
-<accessCondition type="useAndReproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC-OW-EU/1.0/</accessCondition>
+RightsStatements.org value added Aug. 1, 2018.
 
 template_fscj_2018summer_Experience.xml
 Installed July 2018 on fscj-test .
-Issues with FSCJ Alpha template: Maybe add a RightsStatements.org value.  (
-<accessCondition type="useAndReproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC-OW-EU/1.0/</accessCondition>
+RightsStatements.org value added Aug. 1, 2018.
 
 ---
 FSU
