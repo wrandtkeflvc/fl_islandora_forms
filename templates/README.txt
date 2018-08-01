@@ -43,14 +43,20 @@ FSJC
 template_fscj_2017Oct_CampusVoice.xml
 Installed on FSCJ's site in October 2017.
 
-template_fscj_2017Oct_Kalliope.xml
+RETIRED template_fscj_2017Oct_Kalliope.xml RETIRED
 Installed on FSCJ's site in October 2017 for the serials.  Installed in December 2017 for the Newspaper Issue Content Model.  From Dec. 12 to 19, 2017, the form association did not include the MODS to DC transformation.
+Retired Aug. 1, 2018.
+
+template_fscj_2018Aug_Kalliope.xml
+Installed Aug. 1, 2018.
 
 template_fscj_2018spring_WorthQuoting
 Installed April 2018 on FSCJ's production site (installed on production before being installed on test).
+RightsStatements.org value added Aug. 1, 2018.
 
 template_fscj_2018spring_WriterToWriter
 Installed April 2018 on FSCJ's production site (installed on production before being installed on test).
+RightsStatements.org value added Aug. 1, 2018.
 
 template_fscj_2018summer_Alpha.xml
 Installed July 2018 on fscj-test .
