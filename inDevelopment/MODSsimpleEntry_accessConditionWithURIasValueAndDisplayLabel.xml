@@ -2191,7 +2191,7 @@
                   <schema/>
                   <type>xml</type>
                   <prefix>NULL</prefix>
-                  <value>&lt;accessCondition type="restrictionOnAccess"&gt;%value%&lt;/accessCondition&gt;</value>
+                  <value>&lt;accessCondition type="restriction on access"&gt;%value%&lt;/accessCondition&gt;</value>
                 </create>
                 <read>
                   <path>/mods:mods/mods:accessCondition[(node()) and (not(@type) or @type='restrictionOnAccess'  or @type='restriction on access')]</path>
