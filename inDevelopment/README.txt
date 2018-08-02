@@ -3,17 +3,31 @@ accessConditionFormWithRightsstatements_org_AndCreativeCommons_URIasValue_displa
 Just the accessCondition fields and the bare minimum of required fields.  This stores the URI for RightsStatements.org or for Creative Commons as the value of the accessCondition element and uses a displayLabel attribute to separate off RightsStatements.org values and Creative Commons values from uncontrolled values.
 Changes needed:  The "use and reproduction" and displayLabel fields are shown to users.  Those should be hidden to make the form visually shorter.  Users can't change those values, so no need to see them (or they should see them in an intentional way like a caption or title or something similar).
 
+(Short form with just required fields and accessCondition;  Development is complete on this, but it can be deployed on sites for a clean up project as needed.)
+
 
 FullMODS_accessConditionWithURIasValueAndDisplayLabel.xml
 
 The Full MODS form with RightsStatements.org and Creative Commons added.
 Installed on all test sites July 24, 2018.
+READY FOR PRODUCTION
 
 
 MODSsimpleEntry_accessConditionWithURIasValueAndDisplayLabel.xml
 
 The MODS Simple Entry form with RightsStatements.org and Creative Commons added.
 Installed on all test sites July 24, 2018.
+READY FOR PRODUCTION
+
+
+MODSsimpleEntry_accessConditionWithURIasValueAndDisplayLabel_FixToLOCrecommendedTypesForAccessCondition.xml
+The MODS Simple Entry form with RightsStatements.org and Creative Commons added.
+Also, opening <accessCondition type="useAndReproduction"> then saving as <accessCondition type="use and reproduction">, and opening <accessCondition type="restrictionOnAccess"> then saving as <accessCondition type="restriction on access">.
+
+
+Full MODS_accessConditionWithURIasValueAndDisplayLabel_FixToLOCrecommendedTypesForAccessCondition.xml
+The Full MODS form with RightsStatements.org and Creative Commons added.
+Also, opening <accessCondition type="useAndReproduction"> then saving as <accessCondition type="use and reproduction">, and opening <accessCondition type="restrictionOnAccess"> then saving as <accessCondition type="restriction on access">.
 
 
 FullMODS_fixingPURLtoNotAPURLflipOnOpen.xml

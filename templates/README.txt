@@ -82,9 +82,10 @@ RETIRED template_fsu_circa2015_FullMODS_secolo.xml RETIRED
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_secolo".  In 2016, this template was associated with the PDF content model.  As of 2018, this template is retired.
 Noted in summer 2018 that the form has no form associations (ie. has been retired from use by FSU).
 
-template_fsu_circa2016_FullMODS_GirlsOwnAnnual.xml
+RETIRED template_fsu_circa2016_FullMODS_GirlsOwnAnnual.xml RETIRED
 Installed on FSU's site.  There is a duplicate Full MODS form named "Full MODS_GirlsOwnAnnual".  That form is associated with the PDF content model, and this template is installed on that association.
 In 2016, this template was associated with the PDF content model.  In 2017/2018, this template was installed on rootSerialCModel and on intermediateCModel .
+Aug. 1 , 2018, Mina emailed with Matthew Miguez.  The template is no longer in use and was retired Aug. 1, 2018.
 
 ---
 UCF
