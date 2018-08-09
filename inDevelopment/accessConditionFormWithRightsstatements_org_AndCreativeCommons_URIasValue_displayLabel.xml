@@ -919,8 +919,8 @@
                     <index key="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial (CC BY-NC 4.0) ( http://creativecommons.org/licenses/by-nc/4.0/ )</index>
                     <index key="http://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA 4.0) ( http://creativecommons.org/licenses/by-nc-sa/4.0/ )</index>
                     <index key="http://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND 4.0) ( http://creativecommons.org/licenses/by-nc-nd/4.0/ )</index>
-					<index key="https://creativecommons.org/publicdomain/zero/1.0/">Public Domain Dedication (CC0) ( https://creativecommons.org/publicdomain/zero/1.0/ )</index>
-					<index key="https://creativecommons.org/publicdomain/mark/1.0/">No Copyright (Public Domain Mark 1.0) ( https://creativecommons.org/publicdomain/mark/1.0/ )</index>
+					<index key="http://creativecommons.org/publicdomain/zero/1.0/">Public Domain Dedication (CC0) ( https://creativecommons.org/publicdomain/zero/1.0/ )</index>
+					<index key="http://creativecommons.org/publicdomain/mark/1.0/">No Copyright (Public Domain Mark 1.0) ( https://creativecommons.org/publicdomain/mark/1.0/ )</index>
                   </options>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
