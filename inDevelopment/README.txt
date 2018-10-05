@@ -7,19 +7,6 @@ Changes needed:  The "use and reproduction" and displayLabel fields are shown to
 
 
 
-MODSsimpleEntry_accessConditionWithURIasValueAndDisplayLabel_FixToLOCrecommendedTypesForAccessCondition.xml
-The MODS Simple Entry form with RightsStatements.org and Creative Commons added.
-Also, opening <accessCondition type="useAndReproduction"> then saving as <accessCondition type="use and reproduction">, and opening <accessCondition type="restrictionOnAccess"> then saving as <accessCondition type="restriction on access">.
-Installed on all test sites August 8, 2018.
-READY FOR PRODUCTION
-
-
-Full MODS_accessConditionWithURIasValueAndDisplayLabel_FixToLOCrecommendedTypesForAccessCondition.xml
-The Full MODS form with RightsStatements.org and Creative Commons added.
-Also, opening <accessCondition type="useAndReproduction"> then saving as <accessCondition type="use and reproduction">, and opening <accessCondition type="restrictionOnAccess"> then saving as <accessCondition type="restriction on access">.
-Installed on all test sites August 8, 2018.
-READY FOR PRODUCTION
-
 
 FullMODS_fixingPURLtoNotAPURLflipOnOpen.xml
 
