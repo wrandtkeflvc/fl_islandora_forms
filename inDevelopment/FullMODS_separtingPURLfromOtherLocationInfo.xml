@@ -10301,7 +10301,13 @@
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
           <required>FALSE</required>
+          <resizable>FALSE</resizable>
           <title>Location</title>
           <tree>TRUE</tree>
           <actions>
@@ -10319,7 +10325,13 @@
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
               <required>FALSE</required>
+              <resizable>FALSE</resizable>
               <tree>TRUE</tree>
               <actions>
                 <create>
@@ -10342,36 +10354,6 @@
               </actions>
             </properties>
             <children>
-              <element name="physicalLocation">
-                <properties>
-                  <type>textfield</type>
-                  <access>TRUE</access>
-                  <description>The institution or repository that holds the resource or where it is available.</description>
-                  <required>FALSE</required>
-                  <title>Physical location</title>
-                  <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema/>
-                      <type>element</type>
-                      <prefix>NULL</prefix>
-                      <value>physicalLocation</value>
-                    </create>
-                    <read>
-                      <path>mods:physicalLocation</path>
-                      <context>parent</context>
-                    </read>
-                    <update>
-                      <path>self::node()</path>
-                      <context>self</context>
-                    </update>
-                    <delete>NULL</delete>
-                  </actions>
-                </properties>
-                <children/>
-              </element>
               <element name="locDispLabel">
                 <properties>
                   <type>select</type>
@@ -10411,8 +10393,14 @@
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
                   <description>The URL or PURL of the resource.</description>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <required>FALSE</required>
+                  <resizable>FALSE</resizable>
                   <title>URL</title>
                   <tree>TRUE</tree>
                   <actions>
@@ -10496,125 +10484,6 @@
                   </actions>
                 </properties>
                 <children/>
-              </element>
-              <element name="holdingSimple">
-                <properties>
-                  <type>markup</type>
-                  <access>TRUE</access>
-                  <collapsed>FALSE</collapsed>
-                  <collapsible>FALSE</collapsible>
-                  <disabled>FALSE</disabled>
-                  <executes_submit_callback>FALSE</executes_submit_callback>
-                  <multiple>FALSE</multiple>
-                  <required>FALSE</required>
-                  <resizable>FALSE</resizable>
-                  <tree>TRUE</tree>
-                  <actions>
-                    <create>
-                      <path>self::node()</path>
-                      <context>parent</context>
-                      <schema>/xs:schema/xs:group/xs:choice/xs:element[@ref='location']</schema>
-                      <type>element</type>
-                      <prefix>NULL</prefix>
-                      <value>holdingSimple</value>
-                    </create>
-                    <read>
-                      <path>mods:holdingSimple</path>
-                      <context>parent</context>
-                    </read>
-                    <update>NULL</update>
-                    <delete>NULL</delete>
-                  </actions>
-                </properties>
-                <children>
-                  <element name="copyInformation">
-                    <properties>
-                      <type>markup</type>
-                      <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
-                      <collapsible>FALSE</collapsible>
-                      <disabled>FALSE</disabled>
-                      <executes_submit_callback>FALSE</executes_submit_callback>
-                      <multiple>FALSE</multiple>
-                      <required>FALSE</required>
-                      <resizable>FALSE</resizable>
-                      <tree>TRUE</tree>
-                      <actions>
-                        <create>
-                          <path>self::node()</path>
-                          <context>parent</context>
-                          <schema/>
-                          <type>element</type>
-                          <prefix>NULL</prefix>
-                          <value>copyInformation</value>
-                        </create>
-                        <read>
-                          <path>mods:copyInformation</path>
-                          <context>parent</context>
-                        </read>
-                        <update>NULL</update>
-                        <delete>NULL</delete>
-                      </actions>
-                    </properties>
-                    <children>
-                      <element name="sublocation">
-                        <properties>
-                          <type>tags</type>
-                          <access>TRUE</access>
-                          <collapsed>FALSE</collapsed>
-                          <collapsible>FALSE</collapsible>
-                          <description>The physical sublocation or collection / subcollection containing the item.</description>
-                          <disabled>FALSE</disabled>
-                          <executes_submit_callback>FALSE</executes_submit_callback>
-                          <multiple>FALSE</multiple>
-                          <required>FALSE</required>
-                          <resizable>FALSE</resizable>
-                          <title>Sublocation</title>
-                          <tree>TRUE</tree>
-                        </properties>
-                        <children>
-                          <element name="0">
-                            <properties>
-                              <type>tag</type>
-                              <access>TRUE</access>
-                              <collapsed>FALSE</collapsed>
-                              <collapsible>FALSE</collapsible>
-                              <disabled>FALSE</disabled>
-                              <executes_submit_callback>FALSE</executes_submit_callback>
-                              <multiple>FALSE</multiple>
-                              <required>FALSE</required>
-                              <resizable>FALSE</resizable>
-                              <tree>TRUE</tree>
-                              <actions>
-                                <create>
-                                  <path>self::node()</path>
-                                  <context>parent</context>
-                                  <schema/>
-                                  <type>element</type>
-                                  <prefix>NULL</prefix>
-                                  <value>subLocation</value>
-                                </create>
-                                <read>
-                                  <path>mods:subLocation</path>
-                                  <context>parent</context>
-                                </read>
-                                <update>
-                                  <path>self::node()</path>
-                                  <context>self</context>
-                                </update>
-                                <delete>
-                                  <path>self::node()</path>
-                                  <context>self</context>
-                                </delete>
-                              </actions>
-                            </properties>
-                            <children/>
-                          </element>
-                        </children>
-                      </element>
-                    </children>
-                  </element>
-                </children>
               </element>
             </children>
           </element>
