@@ -18,3 +18,10 @@ Clean up form version 2 is preferred.  The version one form was only deployed fo
 
 Installed on FGCU's site in June 2018.
 This form opens all identifiers with type = "doi".  When a new identifier is added, it will default to type = "doi" .
+
+-----------------
+
+2018Oct-FAUlocationPURLvsURLcleanupForm.xml
+
+Installed on FAU's site in Oct. 2018.
+This form opens just the <location> field.  It is the Full MODS location info, but with CRUD fixed on the displayLabel="PURL" part of <location displayLabel="PURL">.
