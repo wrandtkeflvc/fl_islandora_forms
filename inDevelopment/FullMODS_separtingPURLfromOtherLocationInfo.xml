@@ -10297,8 +10297,7 @@
           </element>
         </children>
       </element>
-      <element name="location-purl">
-      <element name="location-not-a-purl">
+      <element name="location">
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
@@ -10621,6 +10620,7 @@
           </element>
         </children>
       </element>
+      <element name="locationnotapurl">
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
