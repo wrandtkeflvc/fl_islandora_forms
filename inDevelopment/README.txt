@@ -29,7 +29,7 @@ This is something like a perfect fix to the PURL / URL problem in terms of editi
 
 JustTheLocationFieldMixOfMODSsimpleEntryAndFullMODSform.xml
 
-This is an improved <location> field for the Full MODS form.  The CRUD for displayLabel="PURL" is corrected in this form.  This was installed on FAU's production site on Oct. 8, 2018 for clean up of affected records (and FAU instructed to look closely at how this form is working and report problems or unexpected behavior.
+This is an improved <location> field for the Full MODS form.  The CRUD for displayLabel="PURL" is corrected in this form.  This was installed on FAU's production site on Oct. 8, 2018 for clean up of affected records (and FAU instructed to look closely at how this form is working and report problems or unexpected behavior.  (One change made to the delete field after it was installed on FAU's site.)
 
 
 
