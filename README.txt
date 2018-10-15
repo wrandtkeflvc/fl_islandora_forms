@@ -69,7 +69,9 @@ Step-by-step Instructions for FLVC on installing a form
 
 3)  Run the forms.pl script to copy over the form from the site you installed on to all other sites.  This is in /usr/local/islandora/forms/ and to run, you type "./forms.pl test" for islandora-test or "./forms.pl floradora" for floradora.  (Also, check the source code of the forms.pl script and ensure that all sites are list.  When you check, you are pretty much checking to ensure that any newly launched sites have been added.)
 
-4)  Click to each site, and edit the form in Form Builder.  Make the default Owning Institution value match the value of the college/university on a Create.  (After you "Save & Preview", you will see that the default drop down option matches your current college/university, and that's how you know you've correctly entered the Create value.)
+4)  Click into FSU's production site, and remove the fields of each form that are interacting with the RightsStatements.org and Creative Commons controlled statements.  FSU is doing these with an xlink attribute.  So, FLVC's default forms will not work with FSU's metadata profile and will instead remove the values from the metadata.
+
+5)  Click to each site, and edit the form in Form Builder.  Make the default Owning Institution value match the value of the college/university on a Create.  (After you "Save & Preview", you will see that the default drop down option matches your current college/university, and that's how you know you've correctly entered the Create value.)
 
 
 =========================
