@@ -70,6 +70,9 @@ template_fscj_2018summer_Experience.xml
 Installed July 2018 on fscj-test .
 RightsStatements.org value added Aug. 1, 2018.
 
+template_fscj_2018Oct_FJC_Scape.xml
+Installed October 26, 2018 on fsjc .  Installed on the Newspaper Issue content model.
+
 ---
 FSU
 ---
