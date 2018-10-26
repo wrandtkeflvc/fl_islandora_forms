@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSCJ</flvc:owningInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo type="uniform">
+    <title>FJC Scape</title>
+  </titleInfo>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">newsletter</genre>
+  <originInfo>
+    <issuance>continuing</issuance>
+    <place>
+      <placeTerm type="text">Jacksonville, FL</placeTerm>
+    </place>
+    <publisher>Florida Junior College</publisher>
+  </originInfo>
+  <subject>
+    <topic>Florida Junior College - Newsletter</topic>
+  </subject>
+  <accessCondition type="use and reproduction">Copyright Florida State College at Jacksonville. This Item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder(s) for educational uses. For other uses, you need to obtain permission from the rights-holder(s).</accessCondition>
+  <accessCondition type="use and reproduction">Copyright Florida State College at Jacksonville.</accessCondition>
+  <physicalDescription>
+    <form>text</form>
+    <form>Vol. 10, No.10 (May 21, 1979) – Vol. 15, Issue 11 (December 10, 1982)</form>
+    <form>Some issues missing.</form>
+  </physicalDescription>
+  <note>FJC Scape was the college-sponsored, employee-run publication that served Florida Junior College. Other names for this newsletter is FJC Newsletter, I.S. Newsletter and FJC Scape (began February 8, 1980).
+   </note>
+</mods:mods>
