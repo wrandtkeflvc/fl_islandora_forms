@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSCJ</flvc:owningInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo type="uniform">
+    <title>Instructional Network Notes</title>
+  </titleInfo>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">newsletter</genre>
+  <originInfo>
+    <issuance>continuing</issuance>
+    <place>
+      <placeTerm type="text">Jacksonville, FL</placeTerm>
+    </place>
+    <publisher>Florida Junior College</publisher>
+  </originInfo>
+  <subject>
+    <topic>Florida Junior College - Newsletter</topic>
+  </subject>
+  <accessCondition type="use and reproduction">Copyright Florida State College at Jacksonville. This Item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder(s) for educational uses. For other uses, you need to obtain permission from the rights-holder(s).</accessCondition>
+  <accessCondition type="use and reproduction">Copyright Florida State College at Jacksonville.</accessCondition>
+  <physicalDescription>
+    <form>text</form>
+    <form>Vol. 1, No.1 (September 15, 1983) – Vol. 2, Issue 15 (June 17, 1985)</form>
+  </physicalDescription>
+  <note>The Instructional Network was a funded project of Staff and Program Development under a Master Teacher Project. Dedicated to faculty working together to enrich teaching. Notes is published periodically by the FJC Instructional Network in cooperation with the Educational Services Department, College Administration. Contributions or inquiries were sent to Professor Betsy Grifey or Professor Sue Koeppel, South Campus.</note>
+</mods:mods>
