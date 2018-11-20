@@ -41,3 +41,5 @@ FullMODSmakeTitleNoAttributeRequired.xml
 <titleInfo><title> with no attribute on titleInfo is required by SSDN and by Mango (245 field is required by Mango).
 The MODS Simple Entry already requires <titleInfo><title> with no attribute on titleInfo.
 This in development form is to try and make Full MODS to where it will also require <titleInfo><title> with no attribute on titleInfo.
+Screenshot of form associations needs to change when this goes out, and all form associations need to be manually redone when this goes out.
+Testing this on Cameraman pic on dev:  https://islandora-dev.digital.flvc.org/islandora/object/dev%3A1339
