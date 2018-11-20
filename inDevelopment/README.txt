@@ -33,3 +33,11 @@ FullMODS_separatingPURL_from_physicalLocation_from_URLs.xml
 
 Buggy as of Oct. 2018 (opens the same <location> instance in different fields).
 Goal is to separate PURL from URL from all location info.  This is because logically a URL for a resource can never be the same location as the physical location.  So those should happen in two separate <location> elements, not within a single <location> element.
+
+
+
+FullMODSmakeTitleNoAttributeRequired.xml
+
+<titleInfo><title> with no attribute on titleInfo is required by SSDN and by Mango (245 field is required by Mango).
+The MODS Simple Entry already requires <titleInfo><title> with no attribute on titleInfo.
+This in development form is to try and make Full MODS to where it will also require <titleInfo><title> with no attribute on titleInfo.
