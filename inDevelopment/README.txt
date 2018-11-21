@@ -44,3 +44,9 @@ This in development form is to try and make Full MODS to where it will also requ
 Screenshot of form associations needs to change when this goes out, and all form associations need to be manually redone when this goes out.
 Testing this on Cameraman pic on dev:  https://islandora-dev.digital.flvc.org/islandora/object/dev%3A1339
 KNOWN BUG:  This won't let libraries interact with non sort portions of existing titles.
+
+
+
+FullMODSmakeTitleNoAttributeRequired_HandleNonSort.xml
+
+Same as above form, but looking to allow libraries to interact with non sort portions of existing <titleInfo><title> (with no attributes) elements.

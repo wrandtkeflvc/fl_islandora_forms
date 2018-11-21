@@ -282,27 +282,21 @@
       </element>
       <element name="titleInfo">
         <properties>
-          <type>markup</type>
+          <type>tabs</type>
           <access>TRUE</access>
-          <collapsed>TRUE</collapsed>
-          <collapsible>TRUE</collapsible>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
+          <title>Titles</title>
           <tree>TRUE</tree>
           <actions>
-            <create>
-              <path>/mods:mods</path>
-              <context>document</context>
-              <schema/>
-              <type>element</type>
-              <prefix>NULL</prefix>
-              <value>titleInfo</value>
-            </create>
+            <create>NULL</create>
             <read>
-              <path>/mods:mods/mods:titleInfo[not(@type) or @type='' or @type='main']</path>
+              <path>/mods:mods</path>
               <context>document</context>
             </read>
             <update>NULL</update>
@@ -310,20 +304,17 @@
           </actions>
         </properties>
         <children>
-          <element name="title">
+          <element name="titleInfoNoTypePanel">
             <properties>
-              <type>textfield</type>
+              <type>tabpanel</type>
               <access>TRUE</access>
               <collapsed>FALSE</collapsed>
               <collapsible>FALSE</collapsible>
-              <description>The name by which the resource is formally known.</description>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
-              <maxlength>400</maxlength>
               <multiple>FALSE</multiple>
-              <required>TRUE</required>
+              <required>FALSE</required>
               <resizable>FALSE</resizable>
-              <title>Title</title>
               <tree>TRUE</tree>
               <actions>
                 <create>
@@ -332,20 +323,474 @@
                   <schema/>
                   <type>element</type>
                   <prefix>NULL</prefix>
-                  <value>title</value>
+                  <value>titleInfo</value>
                 </create>
                 <read>
-                  <path>mods:title</path>
-                  <context>parent</context>
+                  <path>/mods:mods/mods:titleInfo[not(@type) or @type='' or @type='main']</path>
+                  <context>document</context>
                 </read>
-                <update>
+                <update>NULL</update>
+                <delete>
                   <path>self::node()</path>
                   <context>self</context>
-                </update>
-                <delete>NULL</delete>
+                </delete>
               </actions>
             </properties>
-            <children/>
+            <children>
+              <element name="titleInfoWithTypeAttribute">
+                <properties>
+                  <type>fieldset</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <title>Title</title>
+                  <tree>TRUE</tree>
+                </properties>
+                <children>
+                  <element name="titleType">
+                    <properties>
+                      <type>select</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>The type of title.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <options>
+                        <index key="">no type indicated</index>
+                        <uniform>uniform</uniform>
+                        <translated>translated</translated>
+                        <alternative>alternative</alternative>
+                        <abbreviated>abbreviated</abbreviated>
+                      </options>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Type</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>type</value>
+                        </create>
+                        <read>
+                          <path>@type</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="nonSort">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>Any initial article that should not be used for filing or database searches.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Non Sort</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>element</type>
+                          <prefix>NULL</prefix>
+                          <value>nonSort</value>
+                        </create>
+                        <read>
+                          <path>mods:nonSort</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="titleWithAttribute">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <maxlength>400</maxlength>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Title</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>element</type>
+                          <prefix>NULL</prefix>
+                          <value>title</value>
+                        </create>
+                        <read>
+                          <path>mods:title</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="subTitle">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>A word, phrase, character, or group of characters that contains the remainder of the title information after the title proper.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Subtitle</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>element</type>
+                          <prefix>NULL</prefix>
+                          <value>subTitle</value>
+                        </create>
+                        <read>
+                          <path>mods:subTitle</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="partNumber">
+                    <properties>
+                      <type>tags</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>The place a single item holds in a collection or series of works, for example, a volume or series number.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Part Number</title>
+                      <tree>TRUE</tree>
+                    </properties>
+                    <children>
+                      <element name="0">
+                        <properties>
+                          <type>tag</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>element</type>
+                              <prefix>NULL</prefix>
+                              <value>partNumber</value>
+                            </create>
+                            <read>
+                              <path>mods:partNumber</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                    </children>
+                  </element>
+                  <element name="partName">
+                    <properties>
+                      <type>tags</type>
+                      <access>TRUE</access>
+                      <description>The title of an individual item in a collection or series of works; should not be used for subtitle.</description>
+                      <required>FALSE</required>
+                      <title>Part Name</title>
+                      <tree>TRUE</tree>
+                    </properties>
+                    <children>
+                      <element name="0">
+                        <properties>
+                          <type>tag</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>element</type>
+                              <prefix>NULL</prefix>
+                              <value>partName</value>
+                            </create>
+                            <read>
+                              <path>mods:partName</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                    </children>
+                  </element>
+                  <element name="titleLanguage">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>The language of the main title, usually the same language as the text.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Language</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>lang</value>
+                        </create>
+                        <read>
+                          <path>@lang</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="authority">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>The controlled vocabulary from which the title was taken.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <return_value>naf</return_value>
+                      <title>Authority</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>authority</value>
+                        </create>
+                        <read>
+                          <path>@authority</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="displayLabel">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>Additional text associated with the element if needed for display purposes.  The preferred text with its capitalization should be included, but not delimiters such as colons.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Display label</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>displayLabel</value>
+                        </create>
+                        <read>
+                          <path>@displayLabel</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="titleAltRepGroup">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>Use to link the title to the same title in a different language or script.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Alternate Representation Group</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>altRepGroup</value>
+                        </create>
+                        <read>
+                          <path>@altRepGroup</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="titleNameTitleGroup">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>Use to link the title to the same title in a different language or script.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Name/title group</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>nameTitleGroup</value>
+                        </create>
+                        <read>
+                          <path>@nameTitleGroup</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                </children>
+              </element>
+            </children>
           </element>
         </children>
       </element>
