@@ -392,10 +392,10 @@
                   <schema/>
                   <type>element</type>
                   <prefix>NULL</prefix>
-                  <value>titleInfo[@type='uniform' or @type='translated' or @type='alternative' or @type='abbreviated']</value>
+                  <value>titleInfo</value>
                 </create>
                 <read>
-                  <path>/mods:mods/mods:titleInfo</path>
+                  <path>/mods:mods/mods:titleInfo[@type='uniform' or @type='translated' or @type='alternative' or @type='abbreviated']</path>
                   <context>document</context>
                 </read>
                 <update>NULL</update>
