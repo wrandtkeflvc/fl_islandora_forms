@@ -40,6 +40,9 @@ Here's a list of templates which FLVC has installed on Islandora sites, and back
 FSJC
 ----
 
+template_fscj_2018Nov_InstructionalNetworkNotes.xml
+Installed on FSCJ's site November 20, 2018.  This is installed on the Full MODS form with a fix to make <titleInfo><title> (no type attribute) required, which was developed but not deployed because deployment of the form fix was scheduled for after the Thanksgiving break.
+
 RETIRED template_fscj_2017Oct_CampusVoice.xml RETIRED
 Installed on FSCJ's site in October 2017.
 Retired Aug. 1, 2018.
