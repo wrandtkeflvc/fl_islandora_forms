@@ -280,7 +280,7 @@
           </element>
         </children>
       </element>
-      <element name="titleInfo">
+      <element name="titleInfoTab">
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
@@ -289,7 +289,7 @@
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
-          <required>FALSE</required>
+          <required>TRUE</required>
           <resizable>FALSE</resizable>
           <title>Titles</title>
           <tree>TRUE</tree>
@@ -304,7 +304,7 @@
           </actions>
         </properties>
         <children>
-          <element name="titleInfoNoTypePanel">
+          <element name="titleInfoPanel">
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
@@ -337,7 +337,7 @@
               </actions>
             </properties>
             <children>
-              <element name="titleInfoNoTypeAttribute">
+              <element name="titleInfo">
                 <properties>
                   <type>fieldset</type>
                   <access>TRUE</access>
@@ -352,7 +352,7 @@
                   <tree>TRUE</tree>
                 </properties>
                 <children>
-                  <element name="nonSortNoType">
+                  <element name="nonSort">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -388,7 +388,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="titleWithAttribute">
+                  <element name="title">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -751,7 +751,7 @@
           </element>
         </children>
       </element>
-      <element name="titleInfoTab">
+      <element name="titleInfoWithTypeTab">
         <properties>
           <type>tabs</type>
           <access>TRUE</access>
@@ -762,7 +762,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Titles</title>
+          <title>Titles (uniform, translated, abbreviated, alternative)</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -775,7 +775,7 @@
           </actions>
         </properties>
         <children>
-          <element name="titleInfoPanel">
+          <element name="titleInfoPanelWithType">
             <properties>
               <type>tabpanel</type>
               <access>TRUE</access>
@@ -808,18 +808,18 @@
               </actions>
             </properties>
             <children>
-              <element name="titleInfoWithTypeAttribute">
+              <element name="titleInfoWithType">
                 <properties>
                   <type>fieldset</type>
                   <access>TRUE</access>
-                  <collapsed>FALSE</collapsed>
-                  <collapsible>FALSE</collapsible>
+                  <collapsed>TRUE</collapsed>
+                  <collapsible>TRUE</collapsible>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
-                  <title>Title</title>
+                  <title>Title  (uniform, translated, abbreviated, alternative)</title>
                   <tree>TRUE</tree>
                 </properties>
                 <children>
@@ -866,7 +866,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="nonSort">
+                  <element name="nonSortWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -902,7 +902,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="titleWithAttribute">
+                  <element name="titleWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -938,7 +938,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="subTitle">
+                  <element name="subTitleWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -974,7 +974,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="partNumber">
+                  <element name="partNumberWithType">
                     <properties>
                       <type>tags</type>
                       <access>TRUE</access>
@@ -1029,12 +1029,18 @@
                       </element>
                     </children>
                   </element>
-                  <element name="partName">
+                  <element name="partNameWithType">
                     <properties>
                       <type>tags</type>
                       <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>The title of an individual item in a collection or series of works; should not be used for subtitle.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
                       <required>FALSE</required>
+                      <resizable>FALSE</resizable>
                       <title>Part Name</title>
                       <tree>TRUE</tree>
                     </properties>
@@ -1078,7 +1084,7 @@
                       </element>
                     </children>
                   </element>
-                  <element name="titleLanguage">
+                  <element name="titleLanguageWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -1114,7 +1120,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="authority">
+                  <element name="authorityWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -1151,7 +1157,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="displayLabel">
+                  <element name="displayLabelWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -1187,7 +1193,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="titleAltRepGroup">
+                  <element name="titleAltRepGroupWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
@@ -1223,7 +1229,7 @@
                     </properties>
                     <children/>
                   </element>
-                  <element name="titleNameTitleGroup">
+                  <element name="titleNameTitleGroupWithType">
                     <properties>
                       <type>textfield</type>
                       <access>TRUE</access>
