@@ -63,7 +63,7 @@ For instructions on using templates with Islandora forms, refer to the README in
 Step-by-step Instructions for FLVC on installing a form
 =======================================================
 
-1)  Delete the form off one site, and reinstall the new version of that form.  For upadtes on test sites, tend to use islandora-test.  For updates on production sites, tend to use floradora.
+1)  Delete the form off one site, and reinstall the new version of that form.  For updates on test sites, tend to use islandora-test.  For updates on production sites, tend to use floradora.
 
 2)  To install the form:  delete the old form, then import the new form, then work through building all the form associations using the screenshot of the form associations.
 
@@ -72,6 +72,10 @@ Step-by-step Instructions for FLVC on installing a form
 4)  Click into FSU's production site, and remove the fields of each form that are interacting with the RightsStatements.org and Creative Commons controlled statements.  FSU is doing these with an xlink attribute.  So, FLVC's default forms will not work with FSU's metadata profile and will instead remove the values from the metadata.
 
 5)  Click to each site, and edit the form in Form Builder.  Make the default Owning Institution value match the value of the college/university on a Create.  (After you "Save & Preview", you will see that the default drop down option matches your current college/university, and that's how you know you've correctly entered the Create value.)
+
+6)  Maintain documentation on the history of the forms in this git log.
+    The /inDevelopment/ directory contains in development forms and a README.txt file which should have information about the goals each form is attempting to accomplish, whether or not it's been tested, known bugs, or whether it's ready to deploy.
+    When you deploy a form on production, update the cannonical forms in the top level of this git repository.  Also, spin off a copy to /pastDeployments/ .  Include the date of the deployment on production in the form name, and include a short summary of the change in the commit message.
 
 
 =========================
