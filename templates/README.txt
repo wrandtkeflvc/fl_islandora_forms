@@ -40,32 +40,35 @@ Here's a list of templates which FLVC has installed on Islandora sites, and back
 FSJC
 ----
 
+template_fscj_2019July_InstructionalResearchNotes.xml
+Installed on FSCJ's site July 8, 2019 for the Newspaper Issue Content Model.
+
 template_fscj_2018Nov_CatalogCollection.xml
-Installed on FSCJ's site November 21, 2018.  This is installed on the Full MODS form with a fix to make <titleInfo><title> (no type attribute) required, which was developed but not deployed because deployment of the form fix was scheduled for after the Thanksgiving break.
+Installed on FSCJ's site November 21, 2018 for the Newspaper Issue Content Model.  This is installed on the Full MODS form with a fix to make <titleInfo><title> (no type attribute) required, which was developed but not deployed because deployment of the form fix was scheduled for after the Thanksgiving break.
 
 template_fscj_2018Nov_InstructionalNetworkNotes.xml
-Installed on FSCJ's site November 21, 2018.  This is installed on the Full MODS form with a fix to make <titleInfo><title> (no type attribute) required, which was developed but not deployed because deployment of the form fix was scheduled for after the Thanksgiving break.
-
-RETIRED template_fscj_2017Oct_CampusVoice.xml RETIRED
-Installed on FSCJ's site in October 2017.
-Retired Aug. 1, 2018.
+Installed on FSCJ's site November 21, 2018 for the Newspaper Issue Content Model.  This is installed on the Full MODS form with a fix to make <titleInfo><title> (no type attribute) required, which was developed but not deployed because deployment of the form fix was scheduled for after the Thanksgiving break.
 
 template_fscj_2018Aug_CampusVoice.xml
-Installed Aug. 1, 2018.
+Installed Aug. 1, 2018 for the Newspaper Issue Content Model.
+
+RETIRED template_fscj_2017Oct_CampusVoice.xml RETIRED
+Installed on FSCJ's site in October 2017 for the Newspaper Issue Content Model.
+Retired Aug. 1, 2018.
 
 RETIRED template_fscj_2017Oct_Kalliope.xml RETIRED
 Installed on FSCJ's site in October 2017 for the serials.  Installed in December 2017 for the Newspaper Issue Content Model.  From Dec. 12 to 19, 2017, the form association did not include the MODS to DC transformation.
 Retired Aug. 1, 2018.
 
 template_fscj_2018Aug_Kalliope.xml
-Installed Aug. 1, 2018.
+Installed Aug. 1, 2018 for the Newspaper Issue Content Model.
 
 template_fscj_2018spring_WorthQuoting
-Installed April 2018 on FSCJ's production site (installed on production before being installed on test).
+Installed April 2018 on FSCJ's production site (installed on production before being installed on test) for the Video Content Model.
 RightsStatements.org value added Aug. 1, 2018.
 
 template_fscj_2018spring_WriterToWriter
-Installed April 2018 on FSCJ's production site (installed on production before being installed on test).
+Installed April 2018 on FSCJ's production site (installed on production before being installed on test) for the Video Content Model.
 RightsStatements.org value added Aug. 1, 2018.
 
 template_fscj_2018summer_Alpha.xml
