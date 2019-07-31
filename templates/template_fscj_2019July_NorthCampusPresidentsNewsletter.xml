@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSCJ</flvc:owningInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo type="uniform">
+    <title>North Campus President's Newsletter</title>
+  </titleInfo>
+  <titleInfo type="alternative">
+	<title>Provost's Notes</title>
+  </titleInfo>
+  <titleInfo type="alternative">
+	<title>North Campus Notes</title>
+  </titleInfo>
+  <titleInfo type="alternative">
+	<title>Provost's Campus Newsletter</title>
+  </titleInfo>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">newsletter</genre>
+  <originInfo>
+    <frequency>Irregular</frequency>
+	<issuance>continuing</issuance>
+    <place>
+      <placeTerm type="text">Jacksonville, FL</placeTerm>
+    </place>
+    <publisher>Florida Junior College</publisher>
+	<publisher>Florida Community College at Jacksonville</publisher>
+  </originInfo>
+  <subject>
+    <topic>Florida Junior College - Newsletter</topic>
+	<topic>Florida Community College at Jacksonville - Newsletter</topic>
+  </subject>
+   <accessCondition type="use and reproduction">
+Copyright Florida State College at Jacksonville. This Item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder(s) for educational uses. For other uses, you need to obtain permission from the rights-holder(s).
+   </accessCondition>
+   <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC/1.0/</accessCondition>
+   <language>
+    <languageTerm type="text" authority="iso639-2b">eng</languageTerm>
+   </language>
+  <physicalDescription>
+    <form>text</form>
+    <form>March 1975 - December 1996</form>
+  </physicalDescription>
+</mods:mods>
