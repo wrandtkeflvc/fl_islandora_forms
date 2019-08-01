@@ -42,6 +42,7 @@ FSJC
 
 template_fscj_2019July_NorthCampusPresidentsNewsletter.xml
 Installed on FSCJ's test site July 31, 2019 for the Newspaper Issue Content Model.
+Installed on FSCJ's production site Aug. 1, 2019 for the Newspaper Issue Content Model.
 
 template_fscj_2019July_InstitutionalResearchNotes.xml
 Installed on FSCJ's site July 8, 2019 for the Newspaper Issue Content Model.
