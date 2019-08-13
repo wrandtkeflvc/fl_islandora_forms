@@ -11,12 +11,8 @@
   <titleInfo type="alternative">
     <title>Voices of College Composition</title>
   </titleInfo>
-  <identifier type="IID">voicesoffreshmanwriting</identifier>
   <typeOfResource>text</typeOfResource>
   <genre authority="marcgt">journal</genre>
-  <location displayLabel="purl">
-    <url>http://purl.flvc.org/fscj/fd/voicesoffreshmanwriting</url>
-  </location>
   <originInfo>
     <frequency>annual</frequency>
 	<issuance>continuing</issuance>

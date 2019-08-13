@@ -8,12 +8,8 @@
   <titleInfo type="uniform">
     <title>FCCJ Spectrum</title>
   </titleInfo>
-  <identifier type="IID">fccjspectrum</identifier>
   <typeOfResource>text</typeOfResource>
   <genre authority="marcgt">newsletter</genre>
-  <location displayLabel="purl">
-    <url>http://purl.flvc.org/fscj/fd/fccjspectrum</url>
-  </location>
   <originInfo>
     <frequency>quarterly</frequency>
 	<issuance>continuing</issuance>
