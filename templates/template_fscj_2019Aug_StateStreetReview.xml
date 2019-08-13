@@ -7,9 +7,7 @@
   </extension>
   <titleInfo type="uniform">
     <title>State Street Review</title>
-  </titleInfo>
-  <titleInfo type="subtitle">
-    <title>Florida's First Coast Writer's Festival</title>
+	<subTitle>Florida's First Coast Writer's Festival</subTitle>
   </titleInfo>
   <typeOfResource>text</typeOfResource>
   <genre authority="marcgt">journal</genre>
