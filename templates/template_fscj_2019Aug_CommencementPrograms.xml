@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSCJ</flvc:owningInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo>
+    <title>Commencement Program</title>
+  </titleInfo>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">journal</genre>
+  <originInfo>
+    <frequency>annual</frequency>
+	<issuance>continuing</issuance>
+    <place>
+      <placeTerm type="text">Jacksonville, FL</placeTerm>
+    </place>
+	<publisher>Florida Junior College</publisher>
+	<publisher>Florida Community College at Jacksonville</publisher>
+	<publisher>Florida State College at Jacksonville</publisher>
+  </originInfo>
+  <subject authority="lcsh">
+	<topic>Commencement ceremonies.</topic>
+  </subject>
+  <subject>
+	<topic>Graduation ceremonies.</topic>
+  </subject>
+   <accessCondition type="use and reproduction">
+Copyright Florida State College at Jacksonville. This Item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder(s) for educational uses. For other uses, you need to obtain permission from the rights-holder(s).
+   </accessCondition>
+   <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC/1.0/</accessCondition>
+   <language>
+    <languageTerm type="text" authority="iso639-2b">eng</languageTerm>
+   </language>
+  <physicalDescription>
+    <form>text</form>
+    <form>1968-current</form>
+    <form>Some programs missing.</form>
+  </physicalDescription>
+  <note>The college's commencement program collection includes college graduation programs, Adulst Basic Ed Recognition programs, high school commencement programs, high school GED commencement programs, and graduation ceremony programs.
+  </note>
+</mods:mods>
