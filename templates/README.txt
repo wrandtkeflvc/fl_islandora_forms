@@ -40,6 +40,10 @@ Here's a list of templates which FLVC has installed on Islandora sites, and back
 FSJC
 ----
 
+template_fscj_2019Aug_CommencementPrograms.xml
+Installed on FSCJ's test site Aug. 16, 2019 for the Newspaper Issue Content Model.
+Installed on FSCJ's production site Aug. 16, 2019 for the Newspaper Issue Content Model.
+
 template_fscj_2019Aug_FJC_Scape_Quarterly.xml
 Installed on FSCJ's test site Aug. 13, 2019 for the Newspaper Issue Content Model.
 Installed on FSCJ's production site Aug. 16, 2019 for the Newspaper Issue Content Model.
