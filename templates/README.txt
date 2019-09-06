@@ -40,6 +40,9 @@ Here's a list of templates which FLVC has installed on Islandora sites, and back
 FSJC
 ----
 
+template_tcc_2019Sept_TheTalon.xml
+Installed on TCC's test site (prior to move to production, so will carry over when the site moves to production) on Sept. 6, 2019.
+
 template_fscj_2019Aug_CommencementPrograms.xml
 Installed on FSCJ's test site Aug. 16, 2019 for the Newspaper Issue Content Model.
 Installed on FSCJ's production site Aug. 16, 2019 for the Newspaper Issue Content Model.
