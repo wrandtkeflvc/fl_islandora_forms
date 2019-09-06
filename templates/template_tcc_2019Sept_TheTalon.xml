@@ -19,10 +19,6 @@
     <publisher>Tallahassee Community College</publisher>
     <frequency>Weekly</frequency>
   </originInfo>
-  <location displayLabel="purl">
-    <url>http://purl.flvc.org/tcc/fd/templatenewspaperissueforthetalon</url>
-    <holdingSimple/>
-  </location>
   <genre>Newspapers</genre>
   <relatedItem type="constituent">
     <titleInfo>
