@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>TCC</flvc:owningInstitution>
+      <flvc:submittingInstitution>TCC</flvc:submittingInstitution>
+    </flvc:flvc>
+  </extension>
+  <titleInfo lang="English">
+    <title>The Talon: Vol. # No. #</title>
+  </titleInfo>
+  <identifier type="IID">TCC_TALON_DDMMYYYY</identifier>
+  <typeOfResource>text</typeOfResource>
+  <originInfo>
+    <dateIssued encoding="w3cdtf">YYYY-MM-DD</dateIssued>
+    <place>
+      <placeTerm type="text">Tallahassee, Fla.</placeTerm>
+    </place>
+    <publisher>Tallahassee Community College</publisher>
+    <frequency>Weekly</frequency>
+  </originInfo>
+  <location displayLabel="purl">
+    <url>http://purl.flvc.org/tcc/fd/templatenewspaperissueforthetalon</url>
+    <holdingSimple/>
+  </location>
+  <genre>Newspapers</genre>
+  <relatedItem type="constituent">
+    <titleInfo>
+      <title>TCC: The Talon Vol. # No. #</title>
+    </titleInfo>
+  </relatedItem>
+  <accessCondition type="use and reproduction">Use of this item is provided for non-commercial, personal, educational, and research use only. For information about the copyright and reproduction rights for this item, please contact the Tallahassee Community College Libraries.</accessCondition>
+  <classification authority="lcc">Tallahassee Periodicals</classification>
+  <classification authority="lcc">TCC Electronic Resource eJournal</classification>
+</mods:mods>
