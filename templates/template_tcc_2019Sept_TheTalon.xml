@@ -18,6 +18,7 @@
     </place>
     <publisher>Tallahassee Community College</publisher>
     <frequency>Weekly</frequency>
+    <issuance>serial</issuance>
   </originInfo>
   <genre>Newspapers</genre>
   <relatedItem type="constituent">
@@ -26,6 +27,7 @@
     </titleInfo>
   </relatedItem>
   <accessCondition type="use and reproduction">Use of this item is provided for non-commercial, personal, educational, and research use only. For information about the copyright and reproduction rights for this item, please contact the Tallahassee Community College Libraries.</accessCondition>
+  <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC-NC/1.0/</accessCondition>
   <classification authority="lcc">Tallahassee Periodicals</classification>
   <classification authority="lcc">TCC Electronic Resource eJournal</classification>
 </mods:mods>
