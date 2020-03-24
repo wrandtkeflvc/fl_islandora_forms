@@ -119,3 +119,108 @@ Pulls from a controlled vocabulary (because it is used for creating a PURL based
 - optional field
 - Used to store provenance information about Digitool.
 - Required that one and only one FLVC <extension> exists.
+
+How to Store Digital Object Identifiers in the MODS
+Digital Object Identifiers (DOIs) should be stored in MODS in the identifier element with a type="doi".
+
+Example:
+
+<identifier type="doi">10.1007/BF02126356</identifier>
+
+and you enter it in the MODS form like this:
+
+Screenshot of a DOI entered into the MODS form.  Under the header "Identifiers", for "Type" enter "doi" (all lowercase), and for "Identifier" enter the DOI only and not any URL made from the DOI.  For example, enter "10.1007/BF02126356" as the "Identifier".
+
+The DOI encoding is used to pull any altmetrics information available for the publication in the altmetric.com service. For this to work, the DOI has to be stored exactly as described above.
+
+How to Store RightsStatements.org values in the MODS
+RightsStatements.org values should be entered into the MODS in the accessCondition element with a type="use and reproduction" and with a displayLabel="RightsStatements.org". The URI should be entered with no other information in the same field (ie. do not mix in human readable information along with the URI - the URI should be by itself).
+
+Significantly, RightsStatements.org URIs use "http" and NOT "https".
+
+Example:
+
+<accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC/1.0/</accessCondition>
+
+and you enter it in the MODS form like this:
+
+Screenshot of the RightsStatements.org field in the MODS form.  Under the header "ACCESS CONDITION: RIGHTSSTATEMENTS" then under the header "RightsStatements.orgValue", use the drop down menu to select a statement.  You will see a human readable value in the form, and the form will save that as a URI.
+
+
+RightsStatements.org and the Excel to MODS Transformer
+
+As of summer 2018, the Excel to MODS Transformer cannot create RightsStatements.org values encoded to FLVC's requirements. There are no plans to add this functionality. If you wish to use the Excel to MODS Transformer to create metadata, then enter the RightsStatements.org URIs in the column labeled "access condition" (just a single URI for each file with no other info in that "access condition" column). Then contact help@flvc.org with "Islandora" in the subject line, send the Excel file, and request FLVC to send you back a .zip file of the MODS records with the RightsStatements.org encoding.
+
+
+Special note on encoding RightsStatements.org as an xlink:
+
+FLVC is aware that FSU will encode the RightsStatements.org values as an xlink.
+
+
+Special note about the Digital Public Library of America's (DPLA's) MODS requirements:
+
+The DPLA has examples of how to encode RightsStatements.org in this guidance document Standardized Rights Statements Implementation Guidelines. DPLA requires that a RightsStatement.org or Creative Commons value be included with every item going into DPLA. And, DPLA requires that this RightsStatement.org or Creative Commons value be the only value stored in <accessCondition type="use and reproduction"> and that local rights statements using uncontrolled language be stored using another type, type="local rights statement". However, this is incompatible with the MODS schema. The examples in the User Guidelines clearly show uncontrolled rights statements in type="use and reproduction". Because the Library of Congress maintains the MODS standard, FLVC will follow the published standard. DPLA is one of many projects using the MODS standard and is not authoritative.
+
+Islandora shares out records via OAI-PMH. One of the settings on the OAI-PMH configuration in Islandora is an option to transform records as they go out. It is possible to install a transformation on the Islandora site's OAI-PMH feed which would remove uncontrolled <accessCondition type="use and reproduction"> statements and send out only the RightsStatements.org and Creative Commons values by taking <accessCondition type="use and reproduction" displayLabel="RightsStatements.org"> and converting it to <accessCondition type="use and reproduction">.
+
+How to Store Creative Commons values in the MODS
+Creative Commons values should be entered into the MODS in the accessCondition element with a type="use and reproduction" and with a displayLabel="Creative Commons". The URI should be entered with no other information in the same field (ie. do not mix in human readable information along with the URI - the URI should be by itself).
+
+Encoding is identical to that used for RightsStatements.org values, except that for Creative Commons values, the displayLabel attribute is different. diplayLabel="Creative Commons" should be used.
+
+Significantly, Creative Commons URIs use "http" and NOT "https".
+
+How RightsStatements.org and Creative Commons values are used in Islandora
+ReuseRightsFacetsScreenshot.png
+
+The RightsStatements.org and Creative Commons values are matched to one of 3 categories:
+
+Free Re-use
+Limited Re-use
+No Re-use
+Here's what's in each
+
+Free Re-use contains:
+RightsStatements.org: No Copyright US: http://rightsstatements.org/vocab/NoC-US/1.0/
+RightsStatements.org: No Known Copyright: http://rightsstatements.org/vocab/NKC/1.0/
+public domain: http://creativecommons.org/publicdomain/mark/1.0/
+Creative Commons: CC-BY-SA: http://creativecommons.org/licenses/by-sa/4.0/
+Creative Commons: CC-BY: http://creativecommons.org/licenses/by/4.0/
+Creative Commons: CC0: http://creativecommons.org/publicdomain/zero/1.0/
+Limited Re-use contains:
+RightsStatements.org: No Copyright - Non-Commercial Use Only: http://rightsstatements.org/vocab/NoC-NC/1.0/
+RightsStatements.org: In Copyright - Educational Use Permitted: http://rightsstatements.org/vocab/InC-EDU/1.0/
+RightsStatements.org: In Copyright - Non-Commercial Use Permitted: http://rightsstatements.org/vocab/InC-NC/1.0/
+RightsStatements.org: No Copyright - Contractual Restrictions: http://rightsstatements.org/vocab/NoC-CR/1.0/
+RightsStatements.org: No Copyright - Other Known Legal Restrictions: http://rightsstatements.org/vocab/NoC-OKLR/1.0/
+Creative Commons: CC-BY-NC: http://creativecommons.org/licenses/by-nc/4.0/
+Creative Commons: CC-BY-NC-ND: http://creativecommons.org/licenses/by-nc-nd/4.0/
+Creative Commons: CC-BY-ND: http://creativecommons.org/licenses/by-nd/4.0/
+Creative Commons: CC-BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/4.0/
+No Re-use contains:
+RightsStatements.org: Copyright Not Evaluated: http://rightsstatements.org/vocab/CNE/1.0/
+RightsStatements.org: Copyright Undetermined: http://rightsstatements.org/vocab/UND/1.0/
+RightsStatements.org: In Copyright: http://rightsstatements.org/vocab/InC/1.0/
+RightsStatements.org: In Copyright - Rights-holder(s) Unlocatable or Unidentifiable: http://rightsstatements.org/vocab/InC-RUU/1.0/
+RightsStatements.org: In Copyright - EU Orphan Work: http://rightsstatements.org/vocab/InC-OW-EU/1.0/
+How to Store ORCIDs in the MODS
+ORCIDs should be stored in <name><nameIdentifier type="ORCID">.
+
+The ORCID is always the URI version, and should always be expressed with "https" and NOT "http". ORCID's guidance document of the ORCID Identifier states, "The ORCID iD is expressed as an https URI, i.e. the 16-digit identifier is preceded by "https://orcid.org/". A hyphen is inserted every 4 digits of the identifier to aid readability."
+
+
+For example:
+
+
+<name>
+
+<namePart type="given">Wilhelmina</namePart>
+
+<namePart type="family">Randtke</namePart>
+
+<nameIdentifier type="orcid">https://orcid.org/0000-0002-7439-8205</nameIdentifier>
+
+</name>
+
+
+As of summer 2020, Islandora is not interacting with the ORCID API, and adding interaction with the ORCID API is not planned or scheduled.
