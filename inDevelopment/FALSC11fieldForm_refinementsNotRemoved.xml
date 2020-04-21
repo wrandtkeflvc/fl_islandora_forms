@@ -297,7 +297,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Titles  (!! This is "Title" in the FALSC metadata standards !!)</title>
+          <title>Titles</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -411,7 +411,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>IID Identifier (!! This is not in the FALSC Metadata Guidelines, but is required by the Islandora software and PURL server. !!)</title>
+          <title>IID Identifier</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -538,7 +538,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Names (!! need to put namePart back for corporate authors !!)  (!! This is Creator and Contributor in the FALSC metadata guidelines. !!)</title>
+          <title>Names (!! need to put namePart back for corporate authors !!)</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -723,7 +723,7 @@
                       <multiple>FALSE</multiple>
                       <required>FALSE</required>
                       <resizable>FALSE</resizable>
-                      <title>Role (text) (!! creator or contributor, a creator is required for each item !!)</title>
+                      <title>Role (text)</title>
                       <tree>TRUE</tree>
                     </properties>
                     <children>
@@ -765,6 +765,114 @@
                         <children/>
                       </element>
                     </children>
+                  </element>
+                  <element name="nameAuth">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>The controlled vocabulary from which the name was taken.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Authority</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>attribute</type>
+                          <prefix>NULL</prefix>
+                          <value>authority</value>
+                        </create>
+                        <read>
+                          <path>@authority</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="orcid">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>Open Researcher and Contributor IDentifier.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>ORCID</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>xml</type>
+                          <prefix>NULL</prefix>
+                          <value>&lt;nameIdentifier type="orcid"&gt;%value%&lt;/nameIdentifier&gt;</value>
+                        </create>
+                        <read>
+                          <path>mods:nameIdentifier[@type='orcid']</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
+                  </element>
+                  <element name="local_name_identifier">
+                    <properties>
+                      <type>textfield</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>A local name identifier.  Use this field to link content models to the Person Entity.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Local NameIdentifier</title>
+                      <tree>TRUE</tree>
+                      <actions>
+                        <create>
+                          <path>self::node()</path>
+                          <context>parent</context>
+                          <schema/>
+                          <type>xml</type>
+                          <prefix>NULL</prefix>
+                          <value>&lt;nameIdentifier type="local"&gt;%value%&lt;/nameIdentifier&gt;</value>
+                        </create>
+                        <read>
+                          <path>mods:nameIdentifier[@type='local']</path>
+                          <context>parent</context>
+                        </read>
+                        <update>
+                          <path>self::node()</path>
+                          <context>self</context>
+                        </update>
+                        <delete>NULL</delete>
+                      </actions>
+                    </properties>
+                    <children/>
                   </element>
                 </children>
               </element>
@@ -951,6 +1059,206 @@
                         </properties>
                         <children/>
                       </element>
+                      <element name="issuedQualifier">
+                        <properties>
+                          <type>select</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use with single date issued that is approximate, inferred, or questionable.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <options>
+                            <index key="">none</index>
+                            <approximate>approximate</approximate>
+                            <inferred>inferred</inferred>
+                            <questionable>questionable</questionable>
+                          </options>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Qualifier</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>mods:dateIssued</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>attribute</type>
+                              <prefix>NULL</prefix>
+                              <value>qualifier</value>
+                            </create>
+                            <read>
+                              <path>mods:dateIssued[not(@point)]/@qualifier</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="issuedStartDate">
+                        <properties>
+                          <type>textfield</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use for start of date range.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Start Date</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>xml</type>
+                              <prefix>NULL</prefix>
+                              <value>&lt;dateIssued encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/dateIssued&gt;</value>
+                            </create>
+                            <read>
+                              <path>mods:dateIssued[@point='start']</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="issuedStartQualifier">
+                        <properties>
+                          <type>select</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use with start of date range that is approximate, inferred, or questionable.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <options>
+                            <index key="">none</index>
+                            <approximate>approximate</approximate>
+                            <inferred>inferred</inferred>
+                            <questionable>questionable</questionable>
+                          </options>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Qualifier</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>mods:dateIssued[@point='start']</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>attribute</type>
+                              <prefix>NULL</prefix>
+                              <value>qualifier</value>
+                            </create>
+                            <read>
+                              <path>mods:dateIssued[@point='start']/@qualifier</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>mods:dateIssued[@point='start']/@qualifier</path>
+                              <context>parent</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="issuedEndDate">
+                        <properties>
+                          <type>textfield</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use for end of date range.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>End Date</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>xml</type>
+                              <prefix>NULL</prefix>
+                              <value>&lt;dateIssued encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/dateIssued&gt;</value>
+                            </create>
+                            <read>
+                              <path>mods:dateIssued[@point='end']</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="issuedEndQualifier">
+                        <properties>
+                          <type>select</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use with end of date range that is approximate, inferred, or questionable.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <options>
+                            <index key="">none</index>
+                            <questionable>questionable</questionable>
+                            <approximate>approximate</approximate>
+                            <inferred>inferred</inferred>
+                          </options>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Qualifier</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>mods:dateIssued[@point='end']</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>attribute</type>
+                              <prefix>NULL</prefix>
+                              <value>qualifier</value>
+                            </create>
+                            <read>
+                              <path>mods:dateIssued[@point='end']/@qualifier</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>mods:dateIssued[@point='end']/@qualifier</path>
+                              <context>parent</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
                     </children>
                   </element>
                   <element name="dateCreatedSet">
@@ -1004,6 +1312,1493 @@
                           </actions>
                         </properties>
                         <children/>
+                      </element>
+                      <element name="dateCreatedQualifier">
+                        <properties>
+                          <type>select</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use with single dates that are approximate, inferred, or questionable.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <options>
+                            <index key="">none</index>
+                            <approximate>approximate</approximate>
+                            <inferred>inferred</inferred>
+                            <questionable>questionable</questionable>
+                          </options>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Qualifier</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>mods:dateCreated</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>attribute</type>
+                              <prefix>NULL</prefix>
+                              <value>qualifier</value>
+                            </create>
+                            <read>
+                              <path>mods:dateCreated[not(@point)]/@qualifier</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="createdStartDate">
+                        <properties>
+                          <type>textfield</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use for start of a date range.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Start Date</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>xml</type>
+                              <prefix>NULL</prefix>
+                              <value>&lt;dateCreated encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/dateCreated&gt;</value>
+                            </create>
+                            <read>
+                              <path>mods:dateCreated[@point='start']</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="createdStartQualifier">
+                        <properties>
+                          <type>select</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use with start of date range that is approximate, inferred, or questionable.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <options>
+                            <index key="">none</index>
+                            <approximate>approximate</approximate>
+                            <inferred>inferred</inferred>
+                            <questionable>questionable</questionable>
+                          </options>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Qualifier</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>mods:dateCreated[@point='start']</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>attribute</type>
+                              <prefix>NULL</prefix>
+                              <value>qualifier</value>
+                            </create>
+                            <read>
+                              <path>mods:dateCreated[@point='start']/@qualifier</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>mods:dateCreated[@point='start']/@qualifier</path>
+                              <context>parent</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="createdEndDate">
+                        <properties>
+                          <type>textfield</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use for end of a date range.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>End Date</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>xml</type>
+                              <prefix>NULL</prefix>
+                              <value>&lt;dateCreated encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/dateCreated&gt;</value>
+                            </create>
+                            <read>
+                              <path>mods:dateCreated[@point='end']</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                      <element name="createdEndQualifier">
+                        <properties>
+                          <type>select</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <description>Use with end of a date range that is approximate, inferred, or questionable.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <options>
+                            <index key="">none</index>
+                            <approximate>approximate</approximate>
+                            <inferred>inferred</inferred>
+                            <questionable>questionable</questionable>
+                          </options>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Qualifier</title>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>mods:dateCreated[@point='end']</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>attribute</type>
+                              <prefix>NULL</prefix>
+                              <value>qualifier</value>
+                            </create>
+                            <read>
+                              <path>mods:dateCreated[@point='end']/@qualifier</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>mods:dateCreated[@point='end']/@qualifier</path>
+                              <context>parent</context>
+                            </update>
+                            <delete>NULL</delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                    </children>
+                  </element>
+                  <element name="otherdateTab">
+                    <properties>
+                      <type>fieldset</type>
+                      <access>TRUE</access>
+                      <collapsed>TRUE</collapsed>
+                      <collapsible>TRUE</collapsible>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Other dates: Copyright, Capture, Valid, Modification, Other</title>
+                      <tree>TRUE</tree>
+                    </properties>
+                    <children>
+                      <element name="dateCopyrightSet">
+                        <properties>
+                          <type>fieldset</type>
+                          <access>TRUE</access>
+                          <collapsed>TRUE</collapsed>
+                          <collapsible>TRUE</collapsible>
+                          <description>The date the resource was copyrighted.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Copyright</title>
+                          <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                          <element name="dateCopyprighted">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for single copyright date.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Copyright date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;copyrightDate encoding="w3cdtf" &gt;%value%&lt;/copyrightDate&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:copyrightDate[not(@point)]</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="copyrightQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with single copyright date if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:copyrightDate</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:copyrightDate[not(@point)]/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="copyrightStartDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for start of copyright date range.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Start Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;copyrightDate encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/copyrightDate&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:copyrightDate[@point='start']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="copyrightStartQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with start of copyright date range if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:copyrightDate[@point='start']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:copyrightDate[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:copyrightDate[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="copyrightEndDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for end of copyright date range.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>End Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;copyrightDate encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/copyrightDate&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:copyrightDate[@point='end']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="copyrightEndQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with end of copyright date range if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:copyrightDate[@point='end']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:copyrightDate[@point='end']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:copyrightDate[@point='end']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                        </children>
+                      </element>
+                      <element name="dateCapturedSet">
+                        <properties>
+                          <type>fieldset</type>
+                          <access>TRUE</access>
+                          <collapsed>TRUE</collapsed>
+                          <collapsible>TRUE</collapsible>
+                          <description>Use for the date(s) on which the resource was digitized or a subsequent snapshot was taken, if different from Date Created or Date Issued.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Captured</title>
+                          <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                          <element name="dateCaptured">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for single date captured.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Date captured</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateCaptured encoding="w3cdtf"&gt;%value%&lt;/dateCaptured&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateCaptured[not(@point)]</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="capturedQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with single date captured if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateCaptured</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateCaptured[not(@point)]/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="capturedStartDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for start of range of capture dates.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Start Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateCaptured encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/dateCaptured&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateCaptured[@point='start']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="capturedStartQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with start of range of capture dates if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateCaptured[@point='start']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateCaptured[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateCaptured[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="capturedEndDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for end of range of capture dates.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>End Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateCaptured encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/dateCaptured&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateCaptured[@point='end']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="capturedEndQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with end of capture dates if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateCaptured[@point='end']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateCaptured[@point='end']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateCaptured[@point='end']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                        </children>
+                      </element>
+                      <element name="dateValidSet">
+                        <properties>
+                          <type>fieldset</type>
+                          <access>TRUE</access>
+                          <collapsed>TRUE</collapsed>
+                          <collapsible>TRUE</collapsible>
+                          <description>The date(s) when the content of the resource is valid.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Valid</title>
+                          <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                          <element name="dateValid">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for single date valid.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Date valid</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateValid encoding="w3cdtf"&gt;%value%&lt;/dateValid&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateValid[not(@point)]</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="validQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with single date valid if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateValid</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateValid[not(@point)]/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="validStartDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for start of date valid range.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Start Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateValid encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/dateValid&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateValid[@point='start']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="validStartQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use if start of date valid range is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateValid[@point='start']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateValid[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateValid[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="validEndDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for end of date valid range.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>End Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateValid encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/dateValid&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateValid[@point='end']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="validEndQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with end of date valid range if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>/mods:mods/mods:originInfo/mods:dateValid[@point='end']</path>
+                                  <context>document</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>/mods:mods/mods:originInfo/mods:dateValid[@point='end']/@qualifier</path>
+                                  <context>document</context>
+                                </read>
+                                <update>
+                                  <path>/mods:mods/mods:originInfo/mods:dateValid[@point='end']/@qualifier</path>
+                                  <context>document</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                        </children>
+                      </element>
+                      <element name="dateModifiedSet">
+                        <properties>
+                          <type>fieldset</type>
+                          <access>TRUE</access>
+                          <collapsed>TRUE</collapsed>
+                          <collapsible>TRUE</collapsible>
+                          <description>Date(s) when the resource was modified or changed.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Modified</title>
+                          <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                          <element name="dateModified">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for a single modification date.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Date valid</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateModified encoding="w3cdtf"&gt;%value%&lt;/dateModified&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateModified[not(@point)]</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="modifiedQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with a single modification date if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateModified</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateModified[not(@point)]/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="modifiedStartDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for the start of a range of modification dates.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Start Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateModified encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/dateModified&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateModified[@point='start']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateModified[@point='start']</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="modifiedStartQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with the start of a range of modification dates if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateModified[@point='start']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateModified[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateModified[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="modifiedEndDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for the end of a range of modification dates.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>End Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateModified encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/dateModified&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateModified[@point='end']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="modifiedEndQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with the end of a range of modification dates if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>/mods:mods/mods:originInfo/mods:dateModified[@point='end']</path>
+                                  <context>document</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>/mods:mods/mods:originInfo/mods:dateModified[@point='end']/@qualifier</path>
+                                  <context>document</context>
+                                </read>
+                                <update>
+                                  <path>/mods:mods/mods:originInfo/mods:dateModified[@point='end']/@qualifier</path>
+                                  <context>document</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                        </children>
+                      </element>
+                      <element name="otherDateSet">
+                        <properties>
+                          <type>fieldset</type>
+                          <access>TRUE</access>
+                          <collapsed>TRUE</collapsed>
+                          <collapsible>TRUE</collapsible>
+                          <description>Use for an unspecified date or date range associated with the resource.</description>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <title>Other</title>
+                          <tree>TRUE</tree>
+                        </properties>
+                        <children>
+                          <element name="otherDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for a single unspecified date. </description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Other date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateOther encoding="w3cdtf"&gt;%value%&lt;/dateOther&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateOther[not(@point)]</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="otherQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with a single unspecified date if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateOther</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateOther[not(@point)]/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="otherStartDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for start of unspecified date range.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Start Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateOther encoding="w3cdtf"
+                                                  point="start"&gt;%value%&lt;/dateOther&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateOther[@point='start']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="otherStartQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with start of unspecified date range when it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateOther[@point='start']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateOther[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateOther[@point='start']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="otherEndDate">
+                            <properties>
+                              <type>textfield</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use for end of unspecified date range.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>End Date</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>self::node()</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>xml</type>
+                                  <prefix>NULL</prefix>
+                                  <value>&lt;dateOther encoding="w3cdtf"
+                                                  point="end"&gt;%value%&lt;/dateOther&gt;</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateOther[@point='end']</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>self::node()</path>
+                                  <context>self</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                          <element name="otherEndQualifier">
+                            <properties>
+                              <type>select</type>
+                              <access>TRUE</access>
+                              <collapsed>FALSE</collapsed>
+                              <collapsible>FALSE</collapsible>
+                              <description>Use with the end of an unspecified date range if it is approximate, inferred, or questionable.</description>
+                              <disabled>FALSE</disabled>
+                              <executes_submit_callback>FALSE</executes_submit_callback>
+                              <multiple>FALSE</multiple>
+                              <options>
+                                <index key="">none</index>
+                                <approximate>approximate</approximate>
+                                <inferred>inferred</inferred>
+                                <questionable>questionable</questionable>
+                              </options>
+                              <required>FALSE</required>
+                              <resizable>FALSE</resizable>
+                              <title>Qualifier</title>
+                              <tree>TRUE</tree>
+                              <actions>
+                                <create>
+                                  <path>mods:dateOther[@point='end']</path>
+                                  <context>parent</context>
+                                  <schema/>
+                                  <type>attribute</type>
+                                  <prefix>NULL</prefix>
+                                  <value>qualifier</value>
+                                </create>
+                                <read>
+                                  <path>mods:dateOther[@point='end']/@qualifier</path>
+                                  <context>parent</context>
+                                </read>
+                                <update>
+                                  <path>mods:dateOther[@point='end']/@qualifier</path>
+                                  <context>parent</context>
+                                </update>
+                                <delete>NULL</delete>
+                              </actions>
+                            </properties>
+                            <children/>
+                          </element>
+                        </children>
                       </element>
                     </children>
                   </element>
