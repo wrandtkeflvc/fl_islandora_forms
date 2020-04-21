@@ -1,3 +1,8 @@
+FALSC11fieldForm.xml
+
+Implementing only the form fields in this standards document (at pages 36 to 85):  https://docs.google.com/document/d/1i9vpvk9Kt4HoW1tr6OfUpy-Jrm_tc4TLKTZm73XthUs/edit  (and locally required fields like IID and flvc:owningInstitution)
+
+
 accessConditionFormWithRightsstatements_org_AndCreativeCommons_URIasValue_displayLabel.xml
 
 Just the accessCondition fields and the bare minimum of required fields.  This stores the URI for RightsStatements.org or for Creative Commons as the value of the accessCondition element and uses a displayLabel attribute to separate off RightsStatements.org values and Creative Commons values from uncontrolled values.
