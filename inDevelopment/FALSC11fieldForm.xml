@@ -642,6 +642,62 @@
                     </properties>
                     <children/>
                   </element>
+                  <element name="namePart">
+                    <properties>
+                      <type>tags</type>
+                      <access>TRUE</access>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
+                      <description>A full personal name (when not divided into Family and Given name), full corporate/meeting name,or 
+ corporate/meeting name segment.</description>
+                      <disabled>FALSE</disabled>
+                      <executes_submit_callback>FALSE</executes_submit_callback>
+                      <multiple>FALSE</multiple>
+                      <required>FALSE</required>
+                      <resizable>FALSE</resizable>
+                      <title>Name Part</title>
+                      <tree>TRUE</tree>
+                    </properties>
+                    <children>
+                      <element name="0">
+                        <properties>
+                          <type>tag</type>
+                          <access>TRUE</access>
+                          <collapsed>FALSE</collapsed>
+                          <collapsible>FALSE</collapsible>
+                          <disabled>FALSE</disabled>
+                          <executes_submit_callback>FALSE</executes_submit_callback>
+                          <multiple>FALSE</multiple>
+                          <required>FALSE</required>
+                          <resizable>FALSE</resizable>
+                          <tree>TRUE</tree>
+                          <actions>
+                            <create>
+                              <path>self::node()</path>
+                              <context>parent</context>
+                              <schema/>
+                              <type>element</type>
+                              <prefix>NULL</prefix>
+                              <value>namePart</value>
+                            </create>
+                            <read>
+                              <path>mods:namePart[not(@*)]</path>
+                              <context>parent</context>
+                            </read>
+                            <update>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </update>
+                            <delete>
+                              <path>self::node()</path>
+                              <context>self</context>
+                            </delete>
+                          </actions>
+                        </properties>
+                        <children/>
+                      </element>
+                    </children>
+                  </element>
                   <element name="given">
                     <properties>
                       <type>textfield</type>
