@@ -903,7 +903,7 @@
                     <properties>
                       <type>fieldset</type>
                       <access>TRUE</access>
-                      <collapsed>TRUE</collapsed>
+                      <collapsed>FALSE</collapsed>
                       <collapsible>TRUE</collapsible>
                       <description>The date the object was issued.  Prefer for formally published materials.  For reformatted material, use the date of the source, not the digital version.  Enter date in the format YYYY-MM-DD. </description>
                       <disabled>FALSE</disabled>
@@ -1350,7 +1350,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Subjects - Topical, Geographic, Temporal, &amp; Genre</title>
+          <title>Location</title>
           <tree>TRUE</tree>
         </properties>
         <children>
