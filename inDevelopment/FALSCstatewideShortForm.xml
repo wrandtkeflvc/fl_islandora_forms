@@ -166,26 +166,28 @@
           </element>
         </children>
       </element>
-      <element name="IID_id">
+      <element name="identifier">
         <properties>
-          <type>markup</type>
+          <type>textfield</type>
           <access>TRUE</access>
           <collapsed>TRUE</collapsed>
           <collapsible>TRUE</collapsible>
+          <description>A unique standard number or code that distinctively identifies the resource. Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
           <disabled>FALSE</disabled>
           <executes_submit_callback>FALSE</executes_submit_callback>
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
+          <title>IID Identifier</title>
           <tree>TRUE</tree>
           <actions>
             <create>
-              <path>/mods:mods</path>
-              <context>document</context>
+              <path/>
+              <context>parent</context>
               <schema/>
-              <type>element</type>
+              <type>xml</type>
               <prefix>NULL</prefix>
-              <value>titleInfo</value>
+              <value>&lt;identifier type="IID"&gt;%value%&lt;/identifier&gt;</value>
             </create>
             <read>
               <path>/mods:mods/mods:identifier[@type='IID']</path>
@@ -195,45 +197,7 @@
             <delete>NULL</delete>
           </actions>
         </properties>
-        <children>
-          <element name="0">
-            <properties>
-              <type>textfield</type>
-              <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
-              <description>A unique standard number or code that distinctively identifies the resource. Valid IID characters are limited to alphanumeric, underscore, hyphen, period, and parentheses.</description>
-              <disabled>FALSE</disabled>
-              <executes_submit_callback>FALSE</executes_submit_callback>
-              <maxlength>400</maxlength>
-              <multiple>FALSE</multiple>
-              <required>TRUE</required>
-              <resizable>FALSE</resizable>
-              <title>IID Identifier</title>
-              <tree>TRUE</tree>
-              <actions>
-                <create>
-                  <path>self::node()</path>
-                  <context>parent</context>
-                  <schema/>
-                  <type>element</type>
-                  <prefix>NULL</prefix>
-                  <value>title</value>
-                </create>
-                <read>
-                  <path>self::node()</path>
-                  <context>parent</context>
-                </read>
-                <update>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </update>
-                <delete>NULL</delete>
-              </actions>
-            </properties>
-            <children/>
-          </element>
-        </children>
+        <children/>
       </element>
       <element name="titleInfo">
         <properties>
