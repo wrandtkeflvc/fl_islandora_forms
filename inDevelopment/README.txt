@@ -8,6 +8,18 @@ FALSC11fieldForm_refinementsNotRemoved.xml
 
 The standard has several places where there is a single item in the Examples, but then many alternatives in the refinement section.  This form still has the refinements included in it.
 
+Here are additional instructions to add to the README for the entire repository after deploying this form:
+
+---(5) FALSCstatewideShortForm.xml---
+One of the ?three? forms which is enabled for all content models (other than the Collection Content Model) on Florida Islandora sites. It has a limited number of fields.  This form is not designed to be compatible with the other MODS forms (ie. data entered with Full MODS or MODS Simple entry cannot be editted with this form).
+
+---(6) FALSCstatewideShortForm_NewspaperIssue.xml---
+FALSCstatewideShortForm customized for newspaper entry.  This is associated only with the Newspaper Issue Content Model.  The purpose of this separate form is to require a date be entered for each newspaper Issue.  A date is required in order for the issues to display correctly within the larger Newspaper object.
+On each new deployment of a MODS form, the FALSCstatewideShortForm_NewspaperIssue form should be recreated by taking a FALSCstatewideShortForm and making the date issued a required field, and making it so that date issued is not collapsed and date created is collapsed by default on going to edit with the form.
+
+---(4) Collection Form FL-Islandora.xml---
+Enabled for the Collection Content Model on Florida Islandora sites.  It contains only a few fields (Title, Description, Note, and Language).
+
 
 accessConditionFormWithRightsstatements_org_AndCreativeCommons_URIasValue_displayLabel.xml
 

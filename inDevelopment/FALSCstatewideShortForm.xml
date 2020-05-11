@@ -369,7 +369,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Names (!! This is Creator and Contributor in the FALSC metadata guidelines. !!)</title>
+          <title>Names</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -436,14 +436,13 @@
                       <access>TRUE</access>
                       <collapsed>FALSE</collapsed>
                       <collapsible>FALSE</collapsible>
-                      <description>A full personal name (when not divided into Family and Given name), full corporate/meeting name,or 
- corporate/meeting name segment.</description>
+                      <description>A full personal name (when not divided into Family and Given name), full corporate/meeting name, or corporate/meeting name segment.</description>
                       <disabled>FALSE</disabled>
                       <executes_submit_callback>FALSE</executes_submit_callback>
                       <multiple>FALSE</multiple>
                       <required>FALSE</required>
                       <resizable>FALSE</resizable>
-                      <title>Name Part</title>
+                      <title>Corporate Name</title>
                       <tree>TRUE</tree>
                     </properties>
                     <children>
@@ -634,7 +633,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Publication (!! This is Publisher and Date in the FALSC Metadata Guidelines. !!)</title>
+          <title>Publication Information</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -754,7 +753,7 @@
                     <properties>
                       <type>fieldset</type>
                       <access>TRUE</access>
-                      <collapsed>FALSE</collapsed>
+                      <collapsed>TRUE</collapsed>
                       <collapsible>TRUE</collapsible>
                       <description>The date the object was issued.  Prefer for formally published materials.  For reformatted material, use the date of the source, not the digital version.  Enter date in the format YYYY-MM-DD. </description>
                       <disabled>FALSE</disabled>
@@ -808,8 +807,8 @@
                     <properties>
                       <type>fieldset</type>
                       <access>TRUE</access>
-                      <collapsed>TRUE</collapsed>
-                      <collapsible>TRUE</collapsible>
+                      <collapsed>FALSE</collapsed>
+                      <collapsible>FALSE</collapsible>
                       <description>The date the object was created.  Prefer for born-digital and unpublished or informally published materials.  For reformatted material, use the date of the source, not the digital version.  Enter date in the format YYYY-MM-DD. </description>
                       <disabled>FALSE</disabled>
                       <executes_submit_callback>FALSE</executes_submit_callback>
@@ -919,8 +918,14 @@
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <required>FALSE</required>
-                  <title>Language (text)</title>
+                  <resizable>FALSE</resizable>
+                  <title>Language (textual description)</title>
                   <tree>TRUE</tree>
                   <actions>
                     <create>
@@ -981,8 +986,14 @@
                 <properties>
                   <type>textfield</type>
                   <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
                   <required>FALSE</required>
-                  <title>Language (code)</title>
+                  <resizable>FALSE</resizable>
+                  <title>Language (three letter code)</title>
                   <tree>TRUE</tree>
                   <actions>
                     <create>
@@ -1580,7 +1591,7 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Access Condition:  Use and Reproduction  (!! This and the following 2 fields are Rights in the FALSC Metadata Guidelines.  !!)</title>
+          <title>Rights</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -1646,7 +1657,6 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Access Condition:  RightsStatements</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -1701,7 +1711,6 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>A rightsstatements.org value.  (Must be identical to xlink value.)</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -1753,7 +1762,6 @@
           <multiple>FALSE</multiple>
           <required>FALSE</required>
           <resizable>FALSE</resizable>
-          <title>Access Condition:  Creative Commons licenses</title>
           <tree>TRUE</tree>
           <actions>
             <create>NULL</create>
@@ -1808,7 +1816,6 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>A Creative Commons value.  (Must be identical to xlink value.)</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
