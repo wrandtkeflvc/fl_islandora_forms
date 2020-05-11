@@ -309,15 +309,15 @@
           <tree>TRUE</tree>
           <actions>
             <create>
-              <path/>
-              <context>parent</context>
+              <path>/mods:mods</path>
+              <context>document</context>
               <schema/>
               <type>xml</type>
               <prefix>NULL</prefix>
-              <value>&lt;identifier type="IID"&gt;%value%&lt;/identifier&gt;</value>
+              <value>&lt;identifier type="minatestiid"&gt;%value%&lt;/identifier&gt;</value>
             </create>
             <read>
-              <path>/mods:mods/mods:identifier[@type='IID']</path>
+              <path>/mods:mods/mods:identifier[@type='minatestiid']</path>
               <context>document</context>
             </read>
             <update>NULL</update>
